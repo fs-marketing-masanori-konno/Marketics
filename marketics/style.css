@@ -1,0 +1,185 @@
+@charset "utf-8";
+/*
+Theme Name: Marketics Theme
+Theme URI: 
+Description: 
+Author: 
+Author URI: 
+Version: 
+License: 
+License URI: 
+Tags: 
+Text Domain: 
+*/
+
+/* =========================================================
+ reset
+========================================================= */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+h1, h2, h3, h4, h5, h6, p, blockquote {
+  color: #444;
+}
+body {
+  line-height: 1;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+ul, ol {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+pre, code, kbd, samp {
+  font-family: monospace, serif;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", 游ゴシック, YuGothic, メイリオ, Meiryo, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 100%;
+  color: #2f2f2f;
+  margin: 0;
+  border: none;
+}
+input,
+textarea {
+  outline: none;
+}
+textarea {
+  resize: vertical;
+}
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+}
+input::-ms-clear {
+  visibility: hidden;
+  display: none;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+select::-ms-value {
+  color: currentColor;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+small {
+  font-size: 84%;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: bottom;
+  font-size: 0;
+  line-height: 0;
+  -ms-interpolation-mode: bicubic;
+}
+html {
+  overflow-y: scroll;
+}
+:focus {
+  outline: none;
+}
+::-webkit-input-placeholder {
+  color: #ff0000;
+}
+::-moz-placeholder {
+  color: #ff0000;
+}
+:-ms-input-placeholder {
+  color: #ff0000;
+}
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* clearfix */
+.cf {
+  *zoom: 1;
+}
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+
+/* itemfixed */
+#itemfixed {
+  width: 360px;
+  /*height: 824px;*/
+}

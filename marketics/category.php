@@ -61,6 +61,7 @@
 		<div class="content-box-inner">
 			<?php
 				$perpage = 12;
+				$tax = "";
 				$sort = "date";
 				$sortorder = "DESC";
 				$paged = get_query_var('paged') ? get_query_var('paged') : 1;

@@ -146,6 +146,34 @@ add_action( 'init', 'create_post_type' );
 
 // カスタムタクソノミー
 function create_post_type_taxes() {
+	
+	// //投稿タグ 'singletag'
+	// $singleTagLabels = array(
+	// 	'name' => __( '投稿タグ', '' ),
+	// 	'singular_name' => __( '投稿タグ', '' ),
+	// 	'menu_name' => __( '投稿タグ', '' ),
+	// 	'all_items' => __( '投稿タグ', '' ),
+	// 	'edit_item' => __( '投稿タグを編集', '' ),
+	// 	'view_item' => __( '投稿タグを表示', '' ),
+	// 	'update_item' => __( '投稿タグを更新', '' ),
+	// 	'add_new_item' => __( '新規投稿タグを追加', '' ),
+	// 	'not_found' => __( '見つかりませんでした', '' ),
+	// 	'no_terms' => __( 'タームがありません', '' )
+	// );
+	// $singleTagArgs = array(
+	// 	'labels' => $singleTagLabels,
+	// 	'hierarchical' => false,
+	// 	'show_ui' => true,
+	// 	'show_in_menu' => true,
+	// 	'show_admin_column' => false,
+	// 	'query_var' => true,
+	// 	'public' => true,
+	// 	'show_in_rest' => false,
+	// 	'rest_base' => '',
+	// 	'show_in_quick_edit' => false
+	// );
+	// register_taxonomy( 'singletag', array( 'post' ), $singleTagArgs );
+
   //広告タクソノミー 'adcat'
 	$adLabels = array(
 		'name' => __( '広告カテゴリ', '' ),
@@ -195,34 +223,6 @@ function create_post_type_taxes() {
 		'show_in_quick_edit' => true
 	);
 	register_taxonomy( 'personalcat', 'personalinfo', $speakerArgs );
-
-	//投稿タグ 'singletag'
-	$singleTagLabels = array(
-		'name' => __( '投稿タグ', '' ),
-		'singular_name' => __( '投稿タグ', '' ),
-		'menu_name' => __( '投稿タグ', '' ),
-		'all_items' => __( '投稿タグ', '' ),
-		'edit_item' => __( '投稿タグを編集', '' ),
-		'view_item' => __( '投稿タグを表示', '' ),
-		'update_item' => __( '投稿タグを更新', '' ),
-		'add_new_item' => __( '新規投稿タグを追加', '' ),
-		'not_found' => __( '見つかりませんでした', '' ),
-		'no_terms' => __( 'タームがありません', '' )
-	);
-	$singleTagArgs = array(
-		'labels' => $singleTagLabels,
-		'hierarchical' => false,
-		'show_ui' => true,
-		'show_in_menu' => true,
-		'show_admin_column' => false,
-		'query_var' => true,
-		'public' => true,
-		'show_in_rest' => false,
-		'rest_base' => '',
-		'rewrite' => array( 'slug' => 'about-ma/tagcat' ),
-		'show_in_quick_edit' => false
-	);
-	register_taxonomy( 'singletag', array( 'post' ), $singleTagArgs );
 
   //ニュースタクソノミー 'newscat'
 	$newsLabels = array(
@@ -344,6 +344,7 @@ add_filter( 'the_content', 'shortcode_unautop', 100 );
 ============ */
 function change_category_to_radio() {
 ?>
+
 <script>
 jQuery(function($) {
     // カテゴリーをラジオボタンに変更

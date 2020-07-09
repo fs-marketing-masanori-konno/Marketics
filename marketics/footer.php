@@ -31,27 +31,28 @@
 </footer>
 
 <script>
-/* スマホタッチアクション -----------------------　*/
-  $('li').bind({
-      /* タッチの開始、マウスボタンを押したとき */
-      'touchstart': function(e) {
-      $(this).addClass( 'is-touch' );
-      },
-      /* タッチの終了、マウスのドラッグの終了 */
-      'touchend': function(e) {
-      $(this).removeClass( 'is-touch' );
-      }
-  });
-  $('label').bind({
-      /* タッチの開始、マウスボタンを押したとき */
-      'touchstart': function(e) {
-      $(this).addClass( 'is-touch' );
-      },
-      /* タッチの終了、マウスのドラッグの終了 */
-      'touchend': function(e) {
-      $(this).removeClass( 'is-touch' );
-      }
-  });
+$('li,label,.section-button,.archive-item',).bind({
+    /* タッチの開始、マウスボタンを押したとき */
+    'touchstart': function(e) {
+    $(this).addClass( 'is-touch' );
+    },
+    /* タッチの終了、マウスのドラッグの終了 */
+    'touchend': function(e) {
+    $(this).removeClass( 'is-touch' );
+    }
+});
+</script>
+<!-- nav color -->
+<script>
+      $('.footer-nav ul li a').each(function(){
+            var $currentURL = location.pathname.split("/")[1];
+            var $href   = $(this).attr("href").split("/")[3];
+            if( $currentURL == $href ){
+              $(this).addClass("active");
+            } else {
+                $(this).removeClass('active');
+            }
+      });
 </script>
 
 <?php wp_footer(); ?>
@@ -62,7 +63,6 @@
 <script type="text/javascript">
 jQuery(function() {
    jQuery('.slider-for').slick({
-  autoplay: false,
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
@@ -70,13 +70,12 @@ jQuery(function() {
   asNavFor: '.top-slide'
   });
   jQuery('.top-slide').slick({
-    autoplay: false,
-    autoplaySpeed: 4900,
+    autoplay: true,
+    autoplaySpeed: 5900,
     centerMode: true,
     speed: 500,
     dots: true,
     variableWidth: true,
-    centerPadding: '80px',
     slidesToShow: 3,
     asNavFor: '.slider-for',
     responsive: [
@@ -86,9 +85,10 @@ jQuery(function() {
           arrows: true,
           pauseOnHover: false,
           pauseOnFocus: false,
+          swipe: true,
+          swipeToSlide: true,
           pauseOnDotsHover: false,
           centerMode: true,
-          centerPadding: '60px',
           slidesToShow: 3
         }
       },
@@ -97,10 +97,8 @@ jQuery(function() {
         settings: {
           arrows: true,
           centerMode: true,
-          swipeToSlide: true,
           mobileFirst: false,
           infinite: true,
-          centerPadding: '80px',
           slidesToShow: 1
         }
       }
@@ -113,15 +111,15 @@ jQuery(function() {
 <div id="fb-root"></div>
 <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script> -->
 
-
 <script>(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.async = true;
-js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8&appId=402529410110731";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.async = true;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8&appId=402529410110731";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 <?php } ?>
 </body>
 </html>

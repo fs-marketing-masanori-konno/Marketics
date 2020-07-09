@@ -33,9 +33,11 @@
 				<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-<?php echo $catChildslug; ?>.jpg" />
 			<?php endif; ?>
 			<div class="cat-title">
-				<?php if( is_category('interview')): //cat:インタビュー記事一覧 ?>
+				<?php if( $catChildslug = ""): ?>
+					<img class="header-logo-img" src="<?php bloginfo('template_directory'); ?>/images/category/logo-<?php echo $catChildslug; ?>.png" />
+				<?php elseif( is_category('interview')): //cat:インタビュー記事一覧 ?>
 					<h1>Interview</h1>
-					<p>インタビュー記事一覧</p>
+					<p>インタビュー記事一覧</p>					
 				<?php elseif( is_category('event-report')): //cat:イベントレポート ?>
 					<h1>Event report</h1>
 					<p>イベントレポート</p>

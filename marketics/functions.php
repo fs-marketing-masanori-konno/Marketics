@@ -219,6 +219,7 @@ function create_post_type_taxes() {
 		'public' => true,
 		'show_in_rest' => false,
 		'rest_base' => '',
+		'rewrite' => array( 'slug' => 'about-ma/tagcat' ),
 		'show_in_quick_edit' => false
 	);
 	register_taxonomy( 'singletag', array( 'post' ), $singleTagArgs );

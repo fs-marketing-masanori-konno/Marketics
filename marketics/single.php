@@ -356,6 +356,7 @@
 			foreach ($cats as $cat) {
 				echo '<a href="'.get_category_link( $cat['id'] ).'">'.$cat['name'].'</a>';
 			} ?>
+			<?php the_tags('','',''); ?>
 		</div>
     </div>
 

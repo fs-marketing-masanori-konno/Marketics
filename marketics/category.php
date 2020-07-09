@@ -21,8 +21,10 @@
 		?>
 			<?php if($catslug == "interview"): ?>
 				<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-<?php echo $catslug; ?>.jpg" />
-			<?php elseif($catslug == "event-report"): ?>
-				<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-<?php echo $catslug; ?>.jpg" />
+			<?php elseif($catChildslug == "b-academy"): ?>
+				<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-b-academy.jpg" />
+			<?php elseif($catChildslug == "mixer"): ?>
+				<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-mixer.jpg" />
 			<?php elseif($parent_slug == "library"||$parent_slug == "marketing"||$parent_slug == "information"): //cat:インタビュー記事一覧 ?>
 				<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-<?php echo $parent_slug; ?>.jpg" />
 			<?php elseif($parent_slug == "interview"): ?>

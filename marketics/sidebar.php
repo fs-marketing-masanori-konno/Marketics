@@ -3,7 +3,7 @@
   <div class="sidebar-inner">
 
     
-  <div class="sidebar-list _article-ranking">
+  <div class="sidebar-list article-ranking">
     <div class="side-heading">Latest Articles <p>- 最新記事</p></div>
       <div class="side-wrap">
       <?php

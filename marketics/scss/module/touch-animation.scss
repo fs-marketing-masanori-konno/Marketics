@@ -1,0 +1,75 @@
+/* =================
+	 Touch animation
+==================== */
+
+@media screen and (max-width: 768px) {
+	.top-archive-item a:hover {
+		.top-archive-thumb .media-inner:after {
+			opacity: 0;
+		}
+		.top-archive-thumb .media-inner img{
+			transform: unset;
+		}
+		.header-thumb img {
+			transform: unset;
+		}
+	}
+	.top-archive-item.is-touch {
+		a .top-archive-thumb .media-inner img{
+			transform: scale(1.14);
+		}
+		a .top-archive-thumb .media-inner:after {
+			opacity: .25;
+		}
+		a .header-thumb img {
+			transform: scale(.96);
+		}
+	}
+	.section-button.is-touch {
+		a {
+			transform: scale(1.1);
+		  color: #fff;
+		  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+		}
+		a:after {
+	    opacity: 1;
+	    transform: none;
+	    width: 100%;
+	  }
+	}
+	.section-button {
+		a:hover {
+			transform: unset;
+		}
+		a:after:hover {
+		    opacity: 0;
+		    transform: none;
+		    width: 100%;
+	 	}
+	}
+	.archive-item.is-touch {
+		a .archive-thumb img {
+		  transform: scale(1.14);
+		}
+		a .archive-thumb .media-inner:after {
+			opacity: .25;
+		}
+	}
+	.related-article-item.is-touch {
+		a .related-article-thumb img.wp-post-image {
+			transform: scale(1.14);
+		}
+		.related-article-item-wrap .related-article-thumb:after {
+			opacity: .25;
+		}
+	}
+	.article-inner .article-body {
+		.prevpost.is-touch,
+		.nextpost.is-touch{
+			img.size-full {
+				transform: scale(1.08);
+				transition: all .4s;
+			}
+		}
+	}
+}

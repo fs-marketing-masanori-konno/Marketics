@@ -95,6 +95,7 @@
 							<li class="global-nav__item" itemprop="hasPart" itemscope ><a itemprop="url" href="<?php bloginfo('url'); ?>/information/">
 								<span class="nav-txt-en" itemprop="name">Information</span><span class="nav-txt-jp">インフォメーション</span></a></li>
 						</ul>
+						<div class="searchform-box"><?php get_search_form(); ?></div>
 					</div>
 					<div class="l-right _nav">
 						<div class="subnav l-right">

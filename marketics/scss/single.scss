@@ -4,7 +4,6 @@
 =============================================== */
 
 
-
 /* ----------------------------------------------
 // base
 // ---------------------------------------------- */
@@ -16,6 +15,7 @@
 /* ----------------------------------------------
 // module（汎用パーツスタイル）
 // ---------------------------------------------- */
+@import "module/touch-animation";
 
 
 /* ----------------------------------------------
@@ -261,20 +261,20 @@ a{
   display: flex;
   padding-top: 80px;
 }
-// .article-eyecatch:before{
-//   content: "";
-//   position: absolute;
-//   background: inherit;
-//   filter: blur(30px);
-//   width: calc(100% + 160px);
-//   height: calc(100% + 160px);
-//   top: -80px;
-//   left: -80px;
-//   right: -80px;
-//   bottom: -80px;
-//   z-index: -1;
-//   transform: translateZ(0);
-// }
+.article-eyecatch:before{
+  content: "";
+  position: absolute;
+  background: inherit;
+  filter: blur(30px);
+  width: calc(100% + 160px);
+  height: calc(100% + 160px);
+  top: -80px;
+  left: -80px;
+  right: -80px;
+  bottom: -80px;
+  z-index: -1;
+  transform: translateZ(0);
+}
 .article-eyecatch:after{
   content: '';
   position: absolute;
@@ -648,6 +648,7 @@ a{
   position: -webkit-sticky;
   position: sticky;
   top: 3%;
+  transition: all .5s;
 }
 .blog-share {
   position: absolute;
@@ -749,15 +750,12 @@ ul.circle_group {
   background-size: 40%;
   background-repeat: no-repeat;*/
 }
-
 @media screen and (max-width: 900px) {
   .blog-share {
     transform: translate(-100px, 0px);
   }
 }
-
 @media screen and (max-width: 768px) {
-
   .blog-share {
     transform: translate(-40px, 0px);
     background: unset;
@@ -1306,6 +1304,7 @@ a:hover .related-article-item-wrap .related-article-thumb:after{
   .article-info {
     width: 800px;
     margin: 0 auto;
+    border-radius: 0;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1313,6 +1312,7 @@ a:hover .related-article-item-wrap .related-article-thumb:after{
     border-radius: 0;
     margin: 0;
     width: 100%;
+    border-radius: 0;
   }
   .single .container .eyecatch-img._thumb {
     margin: 0;
@@ -1320,13 +1320,6 @@ a:hover .related-article-item-wrap .related-article-thumb:after{
       border-radius: 0;
       box-shadow: unset;
     }
-  }
-  .article-info{
-    margin: 0 auto;
-    border-radius: 0;
-  }
-  .article-eyecatch {
-    display: block;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1337,7 +1330,7 @@ a:hover .related-article-item-wrap .related-article-thumb:after{
     display: none;
   }
   .header-inner {
-    position: inherit;
+    // position: inherit;
   }
   .threerows .blog-latest-list { width: auto;}
 	.article-date { font-size: 14px;}
@@ -1362,7 +1355,7 @@ a:hover .related-article-item-wrap .related-article-thumb:after{
     border-radius: 0;
   }
   .article-eyecatch {
-    padding-top: 0px;
+    padding-top: 34px;
   }
 	.article-body img.size-full {
 		width: 106%;
@@ -1439,7 +1432,8 @@ a:hover .related-article-item-wrap .related-article-thumb:after{
   .article-body p.event-overview-title {
 		margin-top: 0px;
 		margin-bottom: 0px;
-    font-size: 21px;
+    font-size: 24px;
+    text-align: center;
 	}
   .article-body p.profile-name,
   .article-body p.profile-position{
@@ -1468,24 +1462,9 @@ a:hover .related-article-item-wrap .related-article-thumb:after{
   .article-inner .article-body img.size-full {
     border-radius: 10px;
     }
-  .article-eyecatch:before {
-    content: '';
-    background: inherit;
-    -webkit-filter: blur(80px);
-    filter: blur(80px);
-    position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    transform: translateZ(0);
-	}
   .PrevNextPost .prevpost p,
   .PrevNextPost .nextpost p {
-    font-size: 12px;
+    font-size: 13px;
     padding-right: unset;
     padding-left: unset;
     width: calc(100% - 132px);
@@ -1541,6 +1520,32 @@ a:hover .related-article-item-wrap .related-article-thumb:after{
     width: 150px;
     height: 36px;
   }
+  .article-eyecatch {
+    padding-top: 48px;
+  }
+
+  // ===================
+  //    SideBar
+  // ===================
+
+  .article-content {
+    .itemfixed {
+      animation:fadeIn 0.4s .2s;
+      animation-fill-mode: both;
+    }
+    .itemfixed.fixed {
+      animation:fadeIn 0.4s;
+      animation-fill-mode: both;
+    }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+  }
+  @keyframes fadeOut {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1585,6 +1590,7 @@ a:hover .related-article-item-wrap .related-article-thumb:after{
     width: 25%;
     flex-basis: 30%;
     margin: auto 2%;
+    transition: all .4s;
   }
   .PrevNextPost .prevpost p,
   .PrevNextPost .nextpost p {
@@ -1621,6 +1627,7 @@ a:hover .related-article-item-wrap .related-article-thumb:after{
   .blog-share {
     width: 300px; 
     transform: translate(-40px, -36px);
+    transition: all .5s;
   }
   ul.circle_group{
     display: flex;
@@ -1642,16 +1649,40 @@ a:hover .related-article-item-wrap .related-article-thumb:after{
   .article-body .interview-profile{
     margin-top: 90px;
   }
+  .backToTop {
+    bottom: 48px;
+  }
+  .article-body p.interview-profile-title,
+  .article-body p.about-event-title,
+  .article-body p.event-overview-title {
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .article-body p.archive-date {
+    margin: 6px 0 0; 
+  }
+  .threerows .related-article-item {
+    width: 100%;
+    padding: 12px 0 0;
+  }
+  .bg-eyecatch {
+    display: none;
+  }
+  .adcat-area span {
+    border-radius: 40px 5px 16px 0;
+  }
 }
 @media screen and (max-width: 375px) {
   .PrevNextPost .nextpost a, .PrevNextPost .prevpost a {
     display: block;
+    height: auto;
   }
   .PrevNextPost .prevpost {
-    padding: 12px 8px 12px 24px;
+    padding: 24px 12px 8px;
   }
   .PrevNextPost .nextpost{
-    padding: 12px 24px 12px 8px;
+    padding: 24px 12px 8px;
   }
   .PrevNextPost .prevpost p, .PrevNextPost .nextpost p {
     width: 100%;
@@ -1661,9 +1692,20 @@ a:hover .related-article-item-wrap .related-article-thumb:after{
     display: none;
   }
   .PrevNextPost .prevpost p:before {
-    left: -37px;
+    left: -28px;
+    top: -8px;
+    height: 20px;
+    padding: 4px 20px;
+    border-radius: 0 0 12px 0;
+    writing-mode: unset;
   }
   .PrevNextPost .nextpost p:before {
-    right: -17px;
+    right: -30px;
+    top: -24px;
+    height: 20px;
+    padding: 4px 20px;
+    border-radius: 0 0 0 12px;
+    writing-mode: unset;
+    content: "次の記事 ▶︎";
   }
 }

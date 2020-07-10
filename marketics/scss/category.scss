@@ -1,4 +1,27 @@
 @charset "UTF-8";
+/* ===============================================
+  front-page
+=============================================== */
+
+
+/* ----------------------------------------------
+// base
+// ---------------------------------------------- */
+
+/* ----------------------------------------------
+// layout
+// ---------------------------------------------- */
+
+/* ----------------------------------------------
+// module（汎用パーツスタイル）
+// ---------------------------------------------- */
+@import "module/touch-animation";
+
+
+/* ----------------------------------------------
+// contents（各ページ固有のスタイル）
+// ---------------------------------------------- */
+
 
 /* ============
 	Category
@@ -113,7 +136,7 @@ header{
 }
 .archive-item {
   width: 900px;
-	min-height: 200px;
+	min-height: 220px;
 	margin: auto;
 	border-bottom: solid 3px #efefef;
   padding-bottom: 18px;
@@ -187,12 +210,13 @@ a:hover .archive-thumb .media-inner {
 }
 .archive-title {
     width: 100%;
-    font-size: 17.5px;
+    max-width: 540px;
+    font-size: 19px;
     color: #333;
     letter-spacing: 1px;
-    line-height: 1.45;
+    line-height: 1.55;
     text-align: justify;
-    padding-bottom: 4px;
+    padding-bottom: 10px;
     padding-top: 4px;
 }
 .archive-on-detail {
@@ -210,18 +234,16 @@ a:hover .archive-thumb .media-inner {
   font-size: 10px;
   line-height: 10px;
   letter-spacing: 0;
-  padding-top: 4px;
   padding-bottom: 4px;
   font-weight: 400;
   text-align: left;
 }
 .archive-company {
-  font-size: 15px;
+  font-size: 13.5px;
   font-weight: 700;
   margin-top: 4px;
   text-align: right;
   padding-right: 20px;
-  color: #364a69;
 }
 .archive-position {
   font-size: 11.5px;
@@ -231,21 +253,21 @@ a:hover .archive-thumb .media-inner {
 }
 .archive-name {
   width: fit-content;
-  font-size: 14.5px;
-  line-height: 14.5px;
+  min-width: 100px;
+  min-height: 27px;
+  font-size: 16px;
   font-weight: 700;
-  background-color: #f4f4f4;
+  letter-spacing: 1px;
+  background-color: #eeeeef;
   border-radius: 6px;
   text-align: right;
   margin-top: 4px;
   margin-left: auto;
   padding: 4px 20px;
-  color: #364a69;
 }
 .archive-on-detail ul, ol {
-  list-style: none;
-  text-align: right;
-  margin-top: -16px;
+    list-style: none;
+    text-align: right;
 }
 /* == Category - Library or Marketing or Information == */
 /*._library .archive-content,
@@ -395,6 +417,12 @@ a:hover .archive-thumb .media-inner {
 		margin: 0 auto;
 	}
 }
+@media screen and (min-width: 1440px) {
+	.archive-title {
+    width: 100%;
+    font-size: 21px;
+  }
+}
 @media screen and (max-width: 960px) {
   .archive-item {
     width: 100%;
@@ -483,11 +511,7 @@ a:hover .archive-thumb .media-inner {
   ._information .archive-thumb img {
     width: 100%;
   }
-  .archive-name {
-    font-size: 12px;
-    padding: 4px 12px;
-  }
-  .archive-company {
+  .archive-content {
     padding-right: 12px;
   }
   .wp-pagenavi a, .wp-pagenavi span {
@@ -568,12 +592,12 @@ a:hover .archive-thumb .media-inner {
 	.archive-content {
     padding-right: 0;
   }
-  ._library .media-inner,
-  ._marketing .media-inner,
-  ._information .media-inner {
-	  position: relative;
-	  height: 80px;
-	}
+ //  ._library .media-inner,
+ //  ._marketing .media-inner,
+ //  ._information .media-inner {
+	//   position: relative;
+	//   height: 80px;
+	// }
   // ._library .archive-thumb img,
   // ._marketing .archive-thumb img,
   // ._information .archive-thumb img {
@@ -611,11 +635,13 @@ a:hover .archive-thumb .media-inner {
     padding-left: 3%;
     min-height: unset;
   }
-  ._library,
-  ._marketing,
-  ._information {
-    .archive-item a {
-      display: flex;
+  .archive-item {
+    &._library,
+    &._marketing,
+    &._information {
+      a {
+        display: flex;
+      }
     }
   }
   .archive-on-detail {
@@ -648,23 +674,6 @@ a:hover .archive-thumb .media-inner {
     max-width: 330px;
     margin-left: auto;
     word-break: keep-all;
-  }
-  .footer-nav a {
-    font-size: 14px;
-  }
-  .footer-nav ul {
-    width: 90%;
-    display: flex;
-  }
-  .footer-nav li {
-    width: unset;
-    flex-basis: 50%;
-    text-align: left;
-    padding-left: 10px;
-    line-height: 2;
-    font-family: bc-alphapipe,Quicksand,sans-serif;
-    font-weight: 700;
-    font-style: normal;
   }
   .footer-siteid {
     margin: 0 0 8px;

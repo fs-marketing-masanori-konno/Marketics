@@ -79,7 +79,7 @@
 
 <section class="top-section top-interview">
   <div class="cat_name_heading _interview">
-     <a href="<?php bloginfo('url'); ?>/interview"><h1>Interview</h1>
+     <a href="<?php bloginfo('url'); ?>/interview/"><h1>Interview</h1>
     <p>インタビュー</p></a>
   </div>
 <?php
@@ -126,8 +126,10 @@
 
 <section class="top-section top-event-report bg-stripe">
   <div class="cat_name_heading _event-report">
-     <a href="<?php bloginfo('url'); ?>/category/interview"><h1>Event Report</h1>
-    <p>イベントレポート</p></a>
+    <a href="<?php bloginfo('url'); ?>/event-report/">
+      <h1>Event Report</h1>
+      <p>イベントレポート</p>
+    </a>
   </div>
 <?php
   $arg = array(
@@ -167,14 +169,16 @@
   wp_reset_postdata();
 ?>
   <div class="section-button _event-report">
-    <a href="<?php bloginfo('url'); ?>/category/event-report/">イベントレポート記事一覧</a>
+    <a href="<?php bloginfo('url'); ?>/event-report/">イベントレポート記事一覧</a>
   </div>
 </section>
 
 <section class="top-section top-marketing">
   <div class="cat_name_heading _marketing">
-    <h1>Marketing</h1>
-    <p>マーケティングに関わる記事</p>
+    <a href="<?php bloginfo('url'); ?>/marketing/">
+      <h1>Marketing</h1>
+      <p>マーケティングに関わる記事</p>
+    </a>
   </div>
 <?php
   $arg = array(
@@ -214,14 +218,16 @@
   wp_reset_postdata();
 ?>
   <div class="section-button _marketing">
-    <a href="<?php bloginfo('url'); ?>/category/marketing/">マーケティング記事一覧</a>
+    <a href="<?php bloginfo('url'); ?>/marketing/">マーケティング記事一覧</a>
   </div>
 </section>
 
 <section class="top-section top-library bg-stripe">
   <div class="cat_name_heading _library">
-    <h1>Library</h1>
-    <p>ライブラリ</p>
+    <a href="<?php bloginfo('url'); ?>/library/">
+      <h1>Library</h1>
+      <p>ライブラリ</p>
+    </a>
   </div>
 <?php
   $arg = array(
@@ -261,14 +267,16 @@
   wp_reset_postdata();
 ?>
   <div class="section-button _library">
-    <a href="<?php bloginfo('url'); ?>/category/library/">特集記事一覧</a>
+    <a href="<?php bloginfo('url'); ?>/library/">特集記事一覧</a>
   </div>
 </section>
 
 <section class="top-section top-information">
   <div class="cat_name_heading _information">
-    <h1>Information</h1>
-    <p>Marketicsからのお知らせ</p>
+    <a href="<?php bloginfo('url'); ?>/event-report/">
+      <h1>Information</h1>
+      <p>Marketicsからのお知らせ</p>
+    </a>
   </div>
 
 <?php
@@ -327,45 +335,46 @@
   <div class="archive-item _ebook" >
     <div class="ebook-content">
       <?php 
-        $ebookurl = "https://bdash-marketing.com/downloadlist";
-        $ebookA   = $ebookurl ."/marketing-trend/wpdl_spj_the-winning-method_apparel-ec/";
-        $ebookB   = $ebookurl ."/market_report/wpdl_mkt-measure-collection_sgit_e-shpg/";
-        $ebookC   = $ebookurl ."/market_report/wpdl_makaibo_new/";
-        $ebookD   = $ebookurl ."/market_report/wpdl_omni-channel_front-line_vol2/";
-        $ebookE   = $ebookurl ."/marketing-trend/wpdl_spj_the-winning-method_apparel-ec/";
-        $ebookF   = $ebookurl ."/market_report/wpdl_mkt-measure-collection_sgit_e-shpg/";
+        $ebookurl = "https://bdash-marketing.com/downloadlist/";
+        $ebookA   = $ebookurl ."marketing-trend/wpdl_spj_the-winning-method_apparel-ec/";
+        $ebookB   = $ebookurl ."market_report/wpdl_mkt-measure-collection_sgit_e-shpg/";
+        $ebookC   = $ebookurl ."market_report/wpdl_makaibo_new/";
+        $ebookD   = $ebookurl ."market_report/wpdl_omni-channel_front-line_vol2/";
+        $ebookE   = $ebookurl ."marketing-trend/wpdl_spj_the-winning-method_apparel-ec/";
+        $ebookF   = $ebookurl ."market_report/wpdl_mkt-measure-collection_sgit_e-shpg/";
       ?>
       <div class="whitepaper _01">
-        <a href="<?php echo $ebookA; ?>"><img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_ApparelEC-Winning-Method.png" alt="新・アパレルECの勝ち方" class="" /><br />
+        <a href="<?php echo $ebookA; ?>?ref=marketics-front">
+        <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_ApparelEC-Winning-Method.png" alt="新・アパレルECの勝ち方" class="" /><br />
           <p>新・アパレルECの勝ち方</p>
         </a>
       </div>
       <div class="whitepaper _02">
-        <a href="<?php echo $ebookB; ?>">
+        <a href="<?php echo $ebookB; ?>?ref=marketics-front">
         <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA_tanpin_EC.png" alt="業界別MA施策31選「単品通販型ビジネス編」" class="" /><br />
           <p>業界別MA施策31選<br>単品通販型ビジネス編</p>
         </a>
       </div>
       <div class="whitepaper _03">
-        <a href="<?php echo $ebookC; ?>">
+        <a href="<?php echo $ebookC; ?>?ref=marketics-front">
           <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA-Kaibo.png" alt="マーケティングオートメーション徹底解剖" class="" /><br />
           <p>MA徹底解剖</p>
         </a>
       </div>
       <div class="whitepaper _04">
-        <a href="<?php echo $ebookD; ?>">
+        <a href="<?php echo $ebookD; ?>?ref=marketics-front">
           <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_Omni_ch_FrontLine_vol2.png" alt="本当は教えたくないオムニチャネル最前線 Vol.2" class="" /><br />
           <p>本当は教えたくない<br>オムニチャネル最前線 2</p>
         </a>
       </div>
       <div class="whitepaper _05">
-        <a href="<?php echo $ebookE; ?>">
+        <a href="<?php echo $ebookE; ?>?ref=marketics-front">
           <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_ApparelEC-Winning-Method.png" alt="新・アパレルECの勝ち方" class="" /><br />
           <P>新・アパレルECの勝ち方</P>
         </a>
       </div>
       <div class="whitepaper _06">
-        <a href="<?php echo $ebookF; ?>">
+        <a href="<?php echo $ebookF; ?>?ref=marketics-front">
           <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA_tanpin_EC.png" alt="業界別MA施策31選「単品通販型ビジネス編」" class="" /><br />
           <p>業界別MA施策31選<br>単品通販型ビジネス編</p>
         </a>
@@ -374,7 +383,7 @@
     </div>
   </div>
   <div class="section-button _ebook">
-    <a href="<?php echo $ebookurl; ?>/downloadlist/">ebook一覧ページ</a>
+    <a href="<?php echo $ebookurl; ?>?marketics-front">ebook一覧ページ</a>
   </div>
 
 </section>

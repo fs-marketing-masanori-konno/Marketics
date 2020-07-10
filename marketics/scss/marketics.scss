@@ -1,4 +1,27 @@
 @charset "UTF-8";
+/* ===============================================
+  front-page
+=============================================== */
+
+
+/* ----------------------------------------------
+// base
+// ---------------------------------------------- */
+
+/* ----------------------------------------------
+// layout
+// ---------------------------------------------- */
+
+/* ----------------------------------------------
+// module（汎用パーツスタイル）
+// ---------------------------------------------- */
+@import "module/search-box";
+
+
+/* ----------------------------------------------
+// contents（各ページ固有のスタイル）
+// ---------------------------------------------- */
+
 
 /* ============
   Common
@@ -87,6 +110,10 @@ h1 {
     height: 80px;
     margin: 0 auto 0 0;
   }
+}
+.footer-nav a.active {
+  color: #0095ff;
+  transition: unset;
 }
 .header-logo {
   // text-align: center;
@@ -397,7 +424,7 @@ nav {
   height: 100px;
 }
 
-._article-ranking {
+.article-ranking {
   .side-thumb {
     position: relative;
     border-radius: 12px;
@@ -422,7 +449,7 @@ nav {
       font-weight: 700;
       font-style: normal;
     letter-spacing: 1.6px;
-    font-size: 21px;
+    font-size: 24px;
     color: #008cef;
     text-decoration: none;
     margin-top: 30px;
@@ -455,7 +482,7 @@ nav {
     width: 19vw;
     min-width: 260px;
     max-width: 300px;
-    padding: 8px 00px 8px;
+    padding: 8px 0px;
     display: flex;
     margin-bottom: 6px;
     border-bottom: 1px solid #ccc;
@@ -661,6 +688,7 @@ nav {
   .category,
   .single {
     .l-right._nav {
+      // margin-right: -36%;
       top: 10px;
       transform: scale(0.85);
     }
@@ -669,12 +697,12 @@ nav {
     max-width: 520px;
     margin: 0 calc(140px + 12%) 0 auto;
   }
-  ._article-ranking .side-list {
+  .article-ranking .side-list {
     padding: 12px;
     padding-top: 12px;
   }
-  ._article-ranking .side-heading {
-    margin-top: 10px;
+  .article-ranking .side-heading {
+  margin-top: 10px;
   }
 }
 /* Tublet */
@@ -887,7 +915,7 @@ nav {
     }
   }
   .home,
-  .category,{
+  .category {
     .l-right {
       position: relative;
       width: 80%;
@@ -916,11 +944,6 @@ nav {
       top: 20px;
     }
   }
-  .header-logo a{
-    height: 100%;
-    width: 100%;
-    position: relative;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -928,7 +951,7 @@ nav {
     margin: auto;
   }
   .header-inner {
-    position: inherit;
+    // position: inherit;
     top: 0px;
   }
   .nav-txt-en {
@@ -965,7 +988,9 @@ nav {
   .glonav li {
     flex-basis: 23vw;
     text-align: center;
+    // margin: 0 2%;
     flex-shrink: 0;
+    // padding: 4px 14px;
   }
   .subnav {
     margin: 6px auto;
@@ -1027,15 +1052,28 @@ nav {
   .header-inner .l-header-content {
     height: 48px;
   }
-  .footer-nav li {
-    flex-basis: 50%;
-    height: 48px;
-  }
   .l-left .glonav {
     width: 96%;
   }
   .global-nav._item .nav-txt-en{
     font-size: 18px;
+  }
+  .footer-nav a {
+    font-size: 14px;
+  }
+  .footer-nav ul {
+    width: 90%;
+  }
+  .footer-nav li {
+    width: unset;
+    flex-basis: 50%;
+    text-align: left;
+    padding-left: 10px;
+    line-height: 2;
+    font-family: bc-alphapipe,Quicksand,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 8px 0px;
   }
 }
 

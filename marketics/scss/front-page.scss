@@ -4,7 +4,6 @@
 =============================================== */
 
 
-
 /* ----------------------------------------------
 // base
 // ---------------------------------------------- */
@@ -16,6 +15,7 @@
 /* ----------------------------------------------
 // module（汎用パーツスタイル）
 // ---------------------------------------------- */
+@import "module/touch-animation";
 
 
 /* ----------------------------------------------
@@ -581,7 +581,7 @@ a:hover .top-archive-thumb .media-inner {
 	.slick-slide {
 		&.slick-center {
 			// transform: scale(1) translate(-34%,50%);
-			transform: scale(1) translate(0%,18%);
+			transform: scale(1) translate(0%,15%);
 			transition-delay: 120ms;
 			transition: all 500ms cubic-bezier(0, 0.87, 0.53, 1.1);
 		}
@@ -644,10 +644,10 @@ a:hover .top-archive-thumb .media-inner {
 
 		.caption {
 			font-weight: 900;
-			padding-top: 18px;
+			padding-top: 14px;
 			text-align: justify;
-			line-height: 1.65;
-			font-size: 24px;
+			line-height: 1.5;
+			font-size: 21px;
 			letter-spacing: 0px;
 			// animation: fadeIn .1s .5s;
 			// animation-fill-mode: both;
@@ -859,23 +859,18 @@ a:hover .top-archive-thumb .media-inner {
 		width: 24px;
 		height: 24px;
 		&.slick-prev {
-			width: 8px;
-			height: 8px;
-			left: 9px;
-			top: 8.5px;
 			left: calc(50% - 170px);
 		}
 		&.slick-next {
-			width: 8px;
-			height: 8px;
-			left: 9px;
-			top: 8.5px;
 			left: calc(50% + 150px);
 		}
 		&.slick-prev,
 		&.slick-next {
 			&:before {
 				content: '';
+				width: 8px;
+				height: 8px;
+				top: 8px;
 				border-top: 2px solid #fff;
 				border-right: 2px solid #fff;
 			}
@@ -1134,8 +1129,8 @@ a:hover .top-archive-thumb .media-inner {
 		padding-right: unset;
 		padding-left: unset;
 		.title {
-	    font-size: 14px;
-    	line-height: 1.45;
+			font-size: 16px;
+			line-height: 1.5;
 		}
 	}
 	.top-archive-item {
@@ -1175,6 +1170,7 @@ a:hover .top-archive-thumb .media-inner {
 	._library,
 	._information {
 		display: block;
+
 		.top-archive-item {
 			&:nth-of-type(2n+1) {
 				padding-left: 0;
@@ -1197,6 +1193,7 @@ a:hover .top-archive-thumb .media-inner {
 			}
 		}
 	}
+
 	.section-button {
 		margin-top: 36px;
 		margin-bottom: 36px;
@@ -1220,22 +1217,22 @@ a:hover .top-archive-thumb .media-inner {
 	.top-section .cat_name_heading {
 		padding-bottom: 40px;
 	}
-	.top-slide.slick-slider {
-		padding-top: 0px;
-	}
+	.top-slide.slick-slider,
 	.slick-slider.slider-for {
-		padding-top: 0px;
+		padding-top: 34px;
 	}
 	/* ==== Slider 768 ==== */
 	.slick-list {
 			height: 420px;
 		}
+
 		.slider-for {
 			.slick-slider {
 					height: 100%;
 					width: 100%;
 			}
 	}
+
 	.top-slide {
 		.slick-slider{
 			height: auto;
@@ -1252,6 +1249,7 @@ a:hover .top-archive-thumb .media-inner {
 			width: fit-content;
 		}
 	}
+
 	.top-slider-item-wrap {
 		.caption-box {
 			// width: 92vw;
@@ -1261,6 +1259,7 @@ a:hover .top-archive-thumb .media-inner {
 			max-width: 460px;
 			margin: 0 auto;
 		}
+
 		.caption {
 			font-size: 1.1rem;
 		}
@@ -1302,34 +1301,7 @@ a:hover .top-archive-thumb .media-inner {
 			border-radius: 16px;
 	}
 }
-/* =================
-	 Touch animation
-==================== */
 
-@media screen and (max-width: 768px) {
-	.top-slide a:hover {
-		.media-inner:after {
-			opacity: 0;
-		}
-		> .top-archive-thumb img {
-			transform: scale(1);
-		}
-		.header-thumb img {
-			transform: scale(1);
-		}
-	}
-	.top-archhive-item.is-touch{
-		> .media-inner:after {
-			opacity: .25;
-		}
-		> .top-archive-thumb img {
-			transform: scale(1.14);
-		}
-		> .header-thumb img {
-			transform: scale(.96);
-		}
-	}
-}
 
 @media screen and (max-width: 660px) {
 	.downloadlistPage .download-archive {
@@ -1359,10 +1331,10 @@ a:hover .top-archive-thumb .media-inner {
 			&:nth-of-type(2n+2),
 			&:nth-of-type(2n+2),
 			&:nth-of-type(2n+2) {
-				margin-bottom: 12px;
+				margin-bottom: 10px;
 				border-bottom: 3px solid #eeeeef;
 				padding-top: 0px;
-				padding-bottom: 0;
+				padding-bottom: 10px;
 			}
 			&:last-of-type{
 				border-bottom: unset;
@@ -1407,6 +1379,7 @@ a:hover .top-archive-thumb .media-inner {
 		}
 		.archive-date {
 			bottom: 6px;
+	    padding-top: 4px;
 		}
 	}
 	.header-eyecatch {
@@ -1421,7 +1394,7 @@ a:hover .top-archive-thumb .media-inner {
 		}
 		.cat_name_heading{
 			background-size: 100px;
-			background-position-y: 3px;
+			background-position-y: 2px;
 		}
 	}
 	.top-archive-thumb {
@@ -1491,7 +1464,7 @@ a:hover .top-archive-thumb .media-inner {
 		}
 		.slick-dots {
 			width: 240px;
-			bottom: 24px;
+			bottom: 27px;
 		}
 		.slick-dots li {
 			width: 40px;
@@ -1503,6 +1476,12 @@ a:hover .top-archive-thumb .media-inner {
 		0% { width: 0px;}
 		100% { width: 40px;}
 	}
+	.slick-arrow.slick-next {
+    left: calc(50% + 124px);
+  }
+  .slick-arrow.slick-prev {
+    left: calc(50% - 150px);
+  }
 }
 @media screen and (max-width: 375px) {
 

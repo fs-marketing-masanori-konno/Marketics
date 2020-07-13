@@ -108,7 +108,7 @@ add_action( 'init', 'create_post_type' );
 // カスタムタクソノミー
 function create_post_type_taxes() {
 	
-	//投稿タグ 'singletag'
+	//投稿タグ 'tagcat'
 	$singleTagLabels = array(
 		'name' => __( '投稿タグ', '' ),
 		'singular_name' => __( '投稿タグ', '' ),
@@ -126,15 +126,18 @@ function create_post_type_taxes() {
 		'hierarchical' => false,
 		'show_ui' => true,
 		'show_in_menu' => true,
-		'show_admin_column' => false,
+		'show_admin_column' => true,
 		'query_var' => true,
 		'public' => true,
 		'show_in_rest' => false,
 		'rest_base' => '',
-		'rewrite' => array( 'slug' => 'category/tag' ),
+		'rewrite' => array(
+		  'slug' => 'tagcat',
+		  'hierarchical' => false
+		),
 		'show_in_quick_edit' => false
 	);
-	register_taxonomy( 'singletag', array( 'post' ), $singleTagArgs );
+	register_taxonomy( 'tagcat', array( 'post' ), $singleTagArgs );
 
   //広告タクソノミー 'adcat'
 	$adLabels = array(

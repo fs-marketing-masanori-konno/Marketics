@@ -349,15 +349,20 @@
 <?php   endif; ?>
 
     <div class="article-cat-tag">
-      <div class="blog-cat-tag">Category & Tag</div>
+      <div class="blog-cat-tag">Category</div>
+			<div class="blog-tags">
+				<?php array_multisort($sort, SORT_ASC, $cats);
+				foreach ($cats as $cat) {
+					echo '<a href="'.get_category_link( $cat['id'] ).'">'.$cat['name'].'</a>';
+				} ?>
+			</div>
+    </div>
 
-		<div class="blog-tags">
-			<?php array_multisort($sort, SORT_ASC, $cats);
-			foreach ($cats as $cat) {
-				echo '<a href="'.get_category_link( $cat['id'] ).'">'.$cat['name'].'</a>';
-			} ?>
-			<?php the_tags('','',''); ?>
-		</div>
+    <div class="article-cat-tag">
+      <div class="blog-cat-tag">Tag</div>
+      <div class="blog-tags">
+				<?php echo get_the_term_list($post->ID,'tagcat'); ?>
+			</div>
     </div>
 
 <div class="article-share">
@@ -436,8 +441,8 @@ if( $prevpost or $nextpost )
 				</a>
 			</li>
 			<?php endwhile; endif; wp_reset_postdata(); ?>
-			
-			<?php 
+
+			<?php
 				$the_query = new WP_Query( $args );
 				$post_count = $the_query->post_count;//表示される投稿の数
 				$post_shortage = 6 - $post_count;

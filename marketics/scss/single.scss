@@ -652,7 +652,8 @@ a{
 }
 .blog-share {
   position: absolute;
-  transform: translate(-144px, -90px);
+  transform: translate(-144px, 0px);
+  top: 90px;
   background: #fff;
   padding: 24px 0px 24px 10px;
   border-radius: 24px 0 0 24px;
@@ -802,7 +803,7 @@ ul.circle_group {
   font-size: 18px;
   color: #38458c;
   margin: 20px 0;
-  margin: 3em 0 0;
+  margin: 16px 0 0;
   display: flex;
 }
 .article-cat-tag p {margin-bottom: 0; }

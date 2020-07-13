@@ -12,7 +12,7 @@
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/front-page.css?<?php echo date('YmdHi'); ?>" media="screen,print">
 <?php }elseif(is_single()){ ?>
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/single.css?<?php echo date('YmdHi'); ?>" media="screen,print">
-<?php }elseif(is_category()){ ?>
+<?php }elseif(is_category() || is_page_template(array('taxonomy-tagcat.php','search.php')) ){ ?>
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/category.css?<?php echo date('YmdHi'); ?>" media="screen,print">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap" rel="stylesheet">
 <?php } ?>
@@ -25,7 +25,7 @@
 <script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/themes/marketics/js/common.js"></script>
 <?php } ?>
 <script>
-	(function(d) {
+	(function(d) {ƒ
 		var config = {
 			kitId: 'oyw1trt',
 			scriptTimeout: 3000,

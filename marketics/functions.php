@@ -13,6 +13,7 @@ require get_template_directory() . '/functions/shortcode.php';
 require get_template_directory() . '/functions/admin.php';
 
 # サイト設定
+// require get_template_directory() . '/functions/config.php';
 
 # デフォルトの機能を調整
 

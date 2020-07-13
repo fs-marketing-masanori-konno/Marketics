@@ -50,7 +50,7 @@ function the_blog_class($interview_type){
 		<div class="category-content">
 				<div class="content-box">
 					<div class="content-box-inner">
-						<?php 
+						<?php
 							$taxonomy_slug = get_query_var('taxonomy');
 							if( $taxonomy_slug !== "tagcat" ) {
 						?>
@@ -59,12 +59,12 @@ function the_blog_class($interview_type){
 						<?php } else { ?>
 								<h1 class="blog-archive-heading <?php echo $taxonomy_slug; ?>">#<?php echo $term_name; ?></h1>
 						<?php } ?>
-					</div>					
+					</div>
 			<?php
 				$perpage = 12;
 				$sort = "date";
 				$sortorder = "DESC";
-				if($term_slug === "words") { 
+				if($term_slug === "words") {
 					$perpage = -1;
 					$sort = "title";
 					$sortorder = "ASC";
@@ -98,8 +98,8 @@ function the_blog_class($interview_type){
 				}
 				$maxPageNum = $the_query->max_num_pages;
 
-				if ($the_query->have_posts()) : ?> 
-									
+				if ($the_query->have_posts()) : ?>
+
 			<?php //通常カテゴリーループ
 				if($term_slug != "words"): while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<ul class="blog-archive-list m-list js-infinite-scroll" data-infinite-max="<?php echo $maxPageNum ?>">
@@ -117,8 +117,8 @@ function the_blog_class($interview_type){
 							</a>
 						</div>
 					</li>
-					<?php endwhile; ?> 
-				</ul>						
+					<?php endwhile; ?>
+				</ul>
 				<?php wp_pagenavi(array('query' => $the_query)); ?>
 			<?php endif; ?>
 
@@ -126,7 +126,7 @@ function the_blog_class($interview_type){
 					<?php next_posts_link( '', $the_query->max_num_pages ); ?>
 				</div>
 				<div class="m-loading"></div>
-				<?php wp_reset_postdata();?> 
+				<?php wp_reset_postdata();?>
 			</div>
 
 		</div><!-- /category-content -->

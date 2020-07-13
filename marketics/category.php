@@ -12,47 +12,37 @@
 			$cats = get_the_category();
 			foreach($cats as $catss):
 			if($catss->category_parent) {
-				$parent_cat = get_category($catss->category_parent);
-				$parent_slug= $parent_cat->slug;
-				$parent_name= $parent_cat->name;
+				$parent_cat   = get_category($catss->category_parent);
+				$parent_slug  = $parent_cat->slug;
+				$parent_name  = $parent_cat->name;
 				$catChildslug = $catss->category_nicename;
 				$catChildname = $catss->cat_name;
 				}
+				$url = esc_url($_SERVER['REQUEST_URI']);
 		?>
-			<?php if($catslug == "interview"): ?>
-				<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-<?php echo $catslug; ?>.jpg" />
-			<?php elseif($catChildslug == "b-academy"): ?>
-				<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-b-academy.jpg" />
-			<?php elseif($catChildslug == "mixer"): ?>
-				<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-mixer.jpg" />
-			<?php elseif($parent_slug == "library"||$parent_slug == "marketing"||$parent_slug == "information"): //cat:インタビュー記事一覧 ?>
-				<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-<?php echo $parent_slug; ?>.jpg" />
-			<?php elseif($parent_slug == "interview"): ?>
-				<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-<?php echo $catChildslug; ?>.jpg" />
-			<?php elseif($parent_slug == "event-report"): ?>
-				<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-<?php echo $catChildslug; ?>.jpg" />
-			<?php endif; ?>
-			<div class="cat-title">
-				<?php if( $catChildslug = ""): ?>
-					<img class="header-logo-img" src="<?php bloginfo('template_directory'); ?>/images/category/logo-<?php echo $catChildslug; ?>.png" />
-				<?php elseif( is_category('interview')): //cat:インタビュー記事一覧 ?>
-					<h1>Interview</h1>
-					<p>インタビュー記事一覧</p>					
-				<?php elseif( is_category('event-report')): //cat:イベントレポート ?>
-					<h1>Event report</h1>
-					<p>イベントレポート</p>
-				<?php elseif( is_category('library')): //cat:ライブラリ ?>
-					<h1>Library</h1>
-					<p>ライブラリ</p>
-				<?php elseif( is_category('marketing')): //cat:マーケティング ?>
-					<h1>Marketing</h1>
-					<p>マーケティング</p>
-				<?php elseif( is_category('information')): //cat:インフォメーション ?>
-					<h1>Information</h1>
-					<p>インフォメーション</p>
-				<?php elseif($parent_slug == "interview"): ?>
+			<?php if (strpos($url, $catChildslug) !== false) { //子カテゴリ記事一覧 ?>
+				<?php if($parent_slug == "interview"): ?>
+					<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-interview-temp.jpg" />
+				<?php elseif($parent_slug == "event-report"): ?>
+					<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-<?php echo $catChildslug; ?>.jpg" />
 				<?php else : ?>
-					<h2><?php echo $catname; ?></h2>
+					<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-<?php echo $parent_slug; ?>.jpg" />
+				<?php endif; ?>
+			<?php } else { //親カテゴリ記事一覧 ?>
+				<img class="header-img" src="<?php bloginfo('template_directory'); ?>/images/category/eyecatch-<?php echo $parent_slug; ?>.jpg" />
+			<?php }; ?>
+
+			<div class="cat-title">
+				<?php if (strpos($url, $catChildslug) !== false): //子カテゴリ記事一覧 ?>
+					<?php if( $parent_slug == "interview" || $parent_slug == "event-report"){ ?>
+						<img class="header-logo-img" src="<?php bloginfo('template_directory'); ?>/images/category/logo-<?php echo $catChildslug; ?>.png" />
+					<?php }else{ ?>
+						<h1><?php echo $catChildname; ?></h1>
+						<?php echo category_description(); ?>
+					<?php }; ?>
+				<?php elseif( is_category('')): //cat:インタビュー記事一覧 ?>
+					<h1><?php echo $parent_name; ?></h1>
+					<?php echo category_description(); ?>
 				<?php endif; ?>
 			</div>
 		<?php break; ?>
@@ -70,7 +60,7 @@
 				$sortorder = "DESC";
 				$paged = get_query_var('paged') ? get_query_var('paged') : 1;
 				$the_query = new WP_Query( array(
-					'paged' => $paged ,
+					'paged' => $paged,
 					'post_type' => $post_type,
 					'category_name' => $catslug,
 					'taxonomy' => $tax,

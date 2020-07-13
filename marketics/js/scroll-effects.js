@@ -26,11 +26,11 @@
         scrollBottom = cancellation.offset().top;
 
     //SNSシェアボタン
-      if (scrollTop > targetTop - 140 ) {  //targetの位置が固定位置よりも小さいとき
-        if (scrollTop < scrollBottom - 140 ) {  //固定位置を超えたら
+      if (scrollTop > targetTop - 240 ) {  //targetの位置が固定位置よりも小さいとき
+        if (scrollTop < scrollBottom - 240 ) {  //固定位置を超えたら
           target.addClass("fixed");
           target.css("position", "fixed");
-          target.css("top", "140px");
+          target.css("top", "40px");
           if (window.matchMedia( '(max-width: 480px)' ).matches) {　
           	target.fadeIn(650).queue(function(next) {
 	          	targetFix.fadeOut(650);

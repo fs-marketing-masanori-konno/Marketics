@@ -334,49 +334,55 @@
   </div>
   <div class="archive-item _ebook" >
     <div class="ebook-content">
-      <?php 
-        $ebookurl = "https://bdash-marketing.com/downloadlist/";
-        $ebookA   = $ebookurl ."marketing-trend/wpdl_spj_the-winning-method_apparel-ec/";
-        $ebookB   = $ebookurl ."market_report/wpdl_mkt-measure-collection_sgit_e-shpg/";
-        $ebookC   = $ebookurl ."market_report/wpdl_makaibo_new/";
-        $ebookD   = $ebookurl ."market_report/wpdl_omni-channel_front-line_vol2/";
-        $ebookE   = $ebookurl ."marketing-trend/wpdl_spj_the-winning-method_apparel-ec/";
-        $ebookF   = $ebookurl ."market_report/wpdl_mkt-measure-collection_sgit_e-shpg/";
+      <?php
+        $ebookurl    = "https://bdash-marketing.com/downloadlist/";
+        $ebooktitleA = "新・アパレルECの勝ち方";
+        $ebookA      = $ebookurl ."marketing-trend/wpdl_spj_the-winning-method_apparel-ec/";
+        $ebooktitleB = "業界別MA施策31選 単品通販型ビジネス編";
+        $ebookB      = $ebookurl ."market_report/wpdl_mkt-measure-collection_sgit_e-shpg/";
+        $ebooktitleC = "マーケティングオートメーション徹底解剖";
+        $ebookC      = $ebookurl ."market_report/wpdl_makaibo_new/";
+        $ebooktitleD = "本当は教えたくない オムニチャネル最前線 Vol.2";
+        $ebookD      = $ebookurl ."market_report/wpdl_omni-channel_front-line_vol2/";
+        $ebooktitleE = "新・アパレルECの勝ち方";
+        $ebookE      = $ebookurl ."marketing-trend/wpdl_spj_the-winning-method_apparel-ec/";
+        $ebooktitleF = "業界別MA施策31選 単品通販型ビジネス編";
+        $ebookF      = $ebookurl ."market_report/wpdl_mkt-measure-collection_sgit_e-shpg/";
       ?>
       <div class="whitepaper _01">
         <a href="<?php echo $ebookA; ?>?ref=marketics-front">
-        <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_ApparelEC-Winning-Method.png" alt="新・アパレルECの勝ち方" class="" /><br />
-          <p>新・アパレルECの勝ち方</p>
+        <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_ApparelEC-Winning-Method.png" alt="<?php echo $ebooktitleA; ?>" class="" /><br />
+          <p><?php echo $ebooktitleA; ?></p>
         </a>
       </div>
       <div class="whitepaper _02">
         <a href="<?php echo $ebookB; ?>?ref=marketics-front">
-        <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA_tanpin_EC.png" alt="業界別MA施策31選「単品通販型ビジネス編」" class="" /><br />
-          <p>業界別MA施策31選<br>単品通販型ビジネス編</p>
+        <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA_tanpin_EC.png" alt="<?php echo $ebooktitleB; ?>" class="" /><br />
+          <p><?php echo $ebooktitleB; ?></p>
         </a>
       </div>
       <div class="whitepaper _03">
         <a href="<?php echo $ebookC; ?>?ref=marketics-front">
-          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA-Kaibo.png" alt="マーケティングオートメーション徹底解剖" class="" /><br />
-          <p>MA徹底解剖</p>
+          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA-Kaibo.png" alt="<?php echo $ebooktitleC; ?>" class="" /><br />
+          <p><?php echo $ebooktitleC; ?></p>
         </a>
       </div>
       <div class="whitepaper _04">
         <a href="<?php echo $ebookD; ?>?ref=marketics-front">
-          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_Omni_ch_FrontLine_vol2.png" alt="本当は教えたくないオムニチャネル最前線 Vol.2" class="" /><br />
-          <p>本当は教えたくない<br>オムニチャネル最前線 2</p>
+          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_Omni_ch_FrontLine_vol2.png" alt="<?php echo $ebooktitleD; ?>" class="" /><br />
+          <p><?php echo $ebooktitleD; ?></p>
         </a>
       </div>
       <div class="whitepaper _05">
         <a href="<?php echo $ebookE; ?>?ref=marketics-front">
-          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_ApparelEC-Winning-Method.png" alt="新・アパレルECの勝ち方" class="" /><br />
-          <P>新・アパレルECの勝ち方</P>
+          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_ApparelEC-Winning-Method.png" alt="<?php echo $ebooktitleE; ?>" class="" /><br />
+          <P><?php echo $ebooktitleE; ?></P>
         </a>
       </div>
       <div class="whitepaper _06">
         <a href="<?php echo $ebookF; ?>?ref=marketics-front">
-          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA_tanpin_EC.png" alt="業界別MA施策31選「単品通販型ビジネス編」" class="" /><br />
-          <p>業界別MA施策31選<br>単品通販型ビジネス編</p>
+          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA_tanpin_EC.png" alt="<?php echo $ebooktitleF; ?>" class="" /><br />
+          <p><?php echo $ebooktitleF; ?></p>
         </a>
       </div>
 

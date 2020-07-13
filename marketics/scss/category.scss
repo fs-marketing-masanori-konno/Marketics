@@ -28,10 +28,11 @@
 ============ */
 
 p, h1, h2, dt, dd, div, li{
-	font-family: tbudrgothic-std, Quicksand, sans-serif;
+	font-family: tbudrgothic-std,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN",游ゴシック,YuGothic,メイリオ,Meiryo,sans-serif;
 	font-weight: 700;
 	font-style: normal;
   color: #949494;
+  -webkit-font-smoothing: antialiased;
 }
 h1 {font-weight: 900;}
 h2 {font-weight: 700;}
@@ -102,12 +103,10 @@ header{
     padding-bottom: 12px;
   }
   h1{
-    font-family: Quicksand;
     color: #fff;
     font-size: 48px;
   }
   h2 {
-    font-family: Quicksand;
     color: #fff;
     font-size: 38px;
   }
@@ -118,6 +117,12 @@ header{
     text-shadow: 0 0 4px #00000080;
     letter-spacing: 2px;
     padding-bottom: 12px;
+  }
+  &.tagcat h1{
+    font-size: 32px;
+  }
+  &.tagcat h2{
+    font-size: 24px;
   }
 }
 .category-content {
@@ -133,6 +138,27 @@ header{
 	width: 960px;
 	margin: 0 auto;
   overflow: hidden;
+}
+.content-tag-box{
+  padding-bottom: 8px;
+  border-bottom: solid 3px #efefef;
+  h2 {
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 30px;
+  }
+  a {
+    font-family: tbudgothic-std,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 8px 12px 8px 0;
+    padding-bottom: 2px;
+    color: #577780;
+    letter-spacing: -0.2px;
+    text-decoration: none;
+  }
 }
 .archive-item {
   width: 900px;
@@ -209,15 +235,14 @@ a:hover .archive-thumb .media-inner {
   flex-basis: 70%;
 }
 .archive-title {
-    width: 100%;
-    max-width: 540px;
-    font-size: 19px;
-    color: #333;
-    letter-spacing: 1px;
-    line-height: 1.55;
-    text-align: justify;
-    padding-bottom: 10px;
-    padding-top: 4px;
+  width: 100%;
+  font-size: 19px;
+  color: #333;
+  letter-spacing: 1px;
+  line-height: 1.55;
+  text-align: justify;
+  // padding-bottom: 10px;
+  padding-top: 4px;
 }
 .archive-on-detail {
 	position: relative;
@@ -231,12 +256,13 @@ a:hover .archive-thumb .media-inner {
 .archive-date {
   top: 4px;
   left: 0;
-  font-size: 10px;
-  line-height: 10px;
-  letter-spacing: 0;
-  padding-bottom: 4px;
-  font-weight: 400;
+  font-family: sans-serif;
   text-align: left;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #949494;
+  letter-spacing: 0;
 }
 .archive-company {
   font-size: 13.5px;

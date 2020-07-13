@@ -131,10 +131,6 @@ function create_post_type_taxes() {
 		'public' => true,
 		'show_in_rest' => false,
 		'rest_base' => '',
-		'rewrite' => array(
-		  'slug' => 'tagcat',
-		  'hierarchical' => false
-		),
 		'show_in_quick_edit' => false
 	);
 	register_taxonomy( 'tagcat', array( 'post' ), $singleTagArgs );

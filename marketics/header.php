@@ -12,7 +12,7 @@
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/front-page.css?<?php echo date('YmdHi'); ?>" media="screen,print">
 <?php }elseif(is_single()){ ?>
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/single.css?<?php echo date('YmdHi'); ?>" media="screen,print">
-<?php }elseif(is_category() || is_page_template(array('taxonomy-tagcat.php','search.php')) ){ ?>
+<?php }elseif(is_category() || is_tax(array('tagcat')) || is_page_template(array('search.php')) ){ ?>
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/category.css?<?php echo date('YmdHi'); ?>" media="screen,print">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap" rel="stylesheet">
 <?php } ?>
@@ -24,15 +24,16 @@
 <script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/themes/marketics/js/scroll-effects.js"></script>
 <script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/themes/marketics/js/common.js"></script>
 <?php } ?>
+
 <script>
-	(function(d) {ƒ
-		var config = {
-			kitId: 'oyw1trt',
-			scriptTimeout: 3000,
-			async: true
-		},
-		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	})(document);
+  (function(d) {
+    var config = {
+      kitId: 'oyw1trt',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

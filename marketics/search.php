@@ -56,7 +56,7 @@
 													<div class="blog-archive-content">
 														<h2 class="blog-archive-title"><?php the_plane_content($post->post_title, 280); ?></h2>
 														<div class="blog-tags">
-															<?php echo get_the_term_list( $post->ID,'singletag'); ?>
+															<?php echo get_the_term_list( $post->ID,'tagcat'); ?>
 														</div>
 														<div class="blog-date"><?php the_time('Y.m.d'); ?></div>
 													</div>

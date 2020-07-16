@@ -210,11 +210,11 @@
 		<ul class="speaker-detail">
 		<?php while(have_rows('acf_subcat_speaker')): the_row(); ?>
     		<?php if(have_rows('repeater-mixer')): ?>
-			<?php 
+			<?php
 				while(have_rows('repeater-mixer')): the_row();
 	   			$groupSubCat_spk = get_sub_field('acf_person_m');
-	   			foreach ((array) $groupSubCat_spk as $Vm ): ?> 
-	  			<?php 
+	   			foreach ((array) $groupSubCat_spk as $Vm ): ?>
+	  			<?php
 	  				setup_postdata($Vm);
 					$Tm_img     = get_field('personal_pic', $Vm);
 					$Tm_name    = get_field('personal_name', $Vm);

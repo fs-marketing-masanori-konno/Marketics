@@ -46,7 +46,7 @@ get_header(); ?>
 		<div class="content-tag-box">
 			<h2>関連記事タグ</h2>
 			<?php
-			  $terms = get_terms('tagcat');
+			  $terms = get_the_terms($post->ID,'tagcat');
 			  foreach ( $terms as $term ) {
 			    echo '<a href="'.get_term_link($term).'">#'.$term->name.'</a>';
 			  }

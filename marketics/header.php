@@ -12,8 +12,11 @@
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/front-page.css?<?php echo date('YmdHi'); ?>" media="screen,print">
 <?php }elseif(is_single()){ ?>
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/single.css?<?php echo date('YmdHi'); ?>" media="screen,print">
-<?php }elseif(is_category() || is_tax(array('tagcat')) || is_page_template(array('search.php')) ){ ?>
+<?php }elseif(is_category() || is_tax(array('tagcat'))){ ?>
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/category.css?<?php echo date('YmdHi'); ?>" media="screen,print">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap" rel="stylesheet">
+<?php }elseif(is_search()){ ?>
+<link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/search-result.css?<?php echo date('YmdHi'); ?>" media="screen,print">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap" rel="stylesheet">
 <?php } ?>
 <?php wp_head(); ?>

@@ -79,8 +79,10 @@
 
 <section class="top-section top-interview">
   <div class="cat_name_heading _interview">
-     <a href="<?php bloginfo('url'); ?>/interview/"><h1>Interview</h1>
-    <p>インタビュー</p></a>
+    <a href="<?php bloginfo('url'); ?>/interview/">
+      <h1>Interview</h1>
+      <p>インタビュー</p>
+    </a>
   </div>
 <?php
   $arg = array(
@@ -95,30 +97,37 @@
   <ul class="top-archive _interview">
   <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
     <li class="top-archive-item">
-      <a href="<?php the_permalink(); ?>">
-        <div class="top-archive-thumb">
+      <div class="top-archive-thumb">
+        <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
-          <?php
-            if (has_post_thumbnail()){
-              the_post_thumbnail( 'large' );
-            } else {
-              /* アイキャッチ無い場合の画像 */
-            }
-          ?>
+            <?php
+              if (has_post_thumbnail()){
+                the_post_thumbnail( 'large' );
+              } else {
+                /* アイキャッチ無い場合の画像 */
+              }
+            ?>
+          </div>
+        </a>
+      </div>
+      <div class="archive-content">
+        <div class="archive-on-detail">
+          <div class="top-archive-meta">
+            <a href="<?php the_permalink(); ?>">
+              <p class="title"><?php the_title(); ?></p>
+            </a>
+            <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
+            <div class="blog-tags">
+              <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
+            </div>
           </div>
         </div>
-        <div class="top-archive-meta">
-          <p class="title"><?php the_title(); ?></p>
-          <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
-        </div>
-      </a>
+      </div>
     </li>
   <?php endforeach; ?>
   </ul>
-<?php
-  endif;
-  wp_reset_postdata();
-?>
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
   <div class="section-button _interview">
     <a href="<?php bloginfo('url'); ?>/interview/">インタビュー記事一覧</a>
   </div>
@@ -144,30 +153,37 @@
   <ul class="top-archive _event-report">
   <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
     <li class="top-archive-item">
-      <a href="<?php the_permalink(); ?>">
-        <div class="top-archive-thumb">
+      <div class="top-archive-thumb">
+        <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
-          <?php
-            if (has_post_thumbnail()){
-              the_post_thumbnail( 'large' );
-            } else {
-              /* アイキャッチ無い場合の画像 */
-            }
-          ?>
+            <?php
+              if (has_post_thumbnail()){
+                the_post_thumbnail( 'large' );
+              } else {
+                /* アイキャッチ無い場合の画像 */
+              }
+            ?>
+          </div>
+        </a>
+      </div>
+      <div class="archive-content">
+        <div class="archive-on-detail">
+          <div class="top-archive-meta">
+            <a href="<?php the_permalink(); ?>">
+              <p class="title"><?php the_title(); ?></p>
+            </a>
+            <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
+            <div class="blog-tags">
+              <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
+            </div>
           </div>
         </div>
-        <div class="top-archive-meta">
-          <p class="title"><?php the_title(); ?></p>
-          <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
-        </div>
-      </a>
+      </div>
     </li>
   <?php endforeach; ?>
   </ul>
-<?php 
-  endif;
-  wp_reset_postdata();
-?>
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
   <div class="section-button _event-report">
     <a href="<?php bloginfo('url'); ?>/event-report/">イベントレポート記事一覧</a>
   </div>
@@ -193,30 +209,37 @@
   <ul class="top-archive _marketing">
   <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
     <li class="top-archive-item">
-      <a href="<?php the_permalink(); ?>">
-        <div class="top-archive-thumb">
+      <div class="top-archive-thumb">
+        <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
-          <?php
-            if (has_post_thumbnail()){
-              the_post_thumbnail( 'large' );
-            } else {
-              /* アイキャッチ無い場合の画像 */
-            }
-          ?>
+            <?php
+              if (has_post_thumbnail()){
+                the_post_thumbnail( 'large' );
+              } else {
+                /* アイキャッチ無い場合の画像 */
+              }
+            ?>
+          </div>
+        </a>
+      </div>
+      <div class="archive-content">
+        <div class="archive-on-detail">
+          <div class="top-archive-meta">
+            <a href="<?php the_permalink(); ?>">
+              <p class="title"><?php the_title(); ?></p>
+            </a>
+            <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
+            <div class="blog-tags">
+              <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
+            </div>
           </div>
         </div>
-        <div class="top-archive-meta">
-          <p class="title"><?php the_title(); ?></p>
-          <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
-        </div>
-      </a>
+      </div>
     </li>
   <?php endforeach; ?>
   </ul>
-<?php
-  endif;
-  wp_reset_postdata();
-?>
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
   <div class="section-button _marketing">
     <a href="<?php bloginfo('url'); ?>/marketing/">マーケティング記事一覧</a>
   </div>
@@ -242,30 +265,37 @@
   <ul class="top-archive _library">
   <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
     <li class="top-archive-item">
-      <a href="<?php the_permalink(); ?>">
-        <div class="top-archive-thumb">
+      <div class="top-archive-thumb">
+        <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
-          <?php
-            if (has_post_thumbnail()){
-              the_post_thumbnail( 'large' );
-            } else {
-              /* アイキャッチ無い場合の画像 */
-            }
-          ?>
+            <?php
+              if (has_post_thumbnail()){
+                the_post_thumbnail( 'large' );
+              } else {
+                /* アイキャッチ無い場合の画像 */
+              }
+            ?>
+          </div>
+        </a>
+      </div>
+      <div class="archive-content">
+        <div class="archive-on-detail">
+          <div class="top-archive-meta">
+            <a href="<?php the_permalink(); ?>">
+              <p class="title"><?php the_title(); ?></p>
+            </a>
+            <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
+            <div class="blog-tags">
+              <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
+            </div>
           </div>
         </div>
-        <div class="top-archive-meta">
-          <p class="title"><?php the_title(); ?></p>
-          <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
-        </div>
-      </a>
+      </div>
     </li>
   <?php endforeach; ?>
   </ul>
-<?php
-  endif;
-  wp_reset_postdata();
-?>
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
   <div class="section-button _library">
     <a href="<?php bloginfo('url'); ?>/library/">特集記事一覧</a>
   </div>
@@ -278,7 +308,6 @@
       <p>Marketicsからのお知らせ</p>
     </a>
   </div>
-
 <?php
   $arg = array(
     'posts_per_page' => 2, // 表示する件数
@@ -289,34 +318,40 @@
   $posts = get_posts( $arg );
   if( $posts ):
 ?>
-
   <ul class="top-archive _information">
   <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
     <li class="top-archive-item">
-      <a href="<?php the_permalink(); ?>">
-        <div class="top-archive-thumb">
+      <div class="top-archive-thumb">
+        <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
-          <?php
-            if (has_post_thumbnail()){
-              the_post_thumbnail( 'large' );
-            } else {
-              /* アイキャッチ無い場合の画像 */
-            }
-          ?>
+            <?php
+              if (has_post_thumbnail()){
+                the_post_thumbnail( 'large' );
+              } else {
+                /* アイキャッチ無い場合の画像 */
+              }
+            ?>
+          </div>
+        </a>
+      </div>
+      <div class="archive-content">
+        <div class="archive-on-detail">
+          <div class="top-archive-meta">
+            <a href="<?php the_permalink(); ?>">
+              <p class="title"><?php the_title(); ?></p>
+            </a>
+            <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
+            <div class="blog-tags">
+              <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
+            </div>
           </div>
         </div>
-        <div class="top-archive-meta">
-          <p class="title"><?php the_title(); ?></p>
-          <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
-        </div>
-      </a>
+      </div>
     </li>
   <?php endforeach; ?>
   </ul>
-<?php
-  endif;
-  wp_reset_postdata();
-?>
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
   <div class="section-button _information">
     <a href="<?php bloginfo('url'); ?>/category/information/">お知らせ記事一覧</a>
   </div>

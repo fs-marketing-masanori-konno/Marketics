@@ -1,0 +1,28 @@
+/* ===========
+   Blog Tag
+=========== */
+.blog-tags {
+  margin: 6px 0;
+}
+.blog-tags a {
+  font-family: tbudgothic-std, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 2.2;
+  margin: 8px 6px 8px 0;
+  padding: 3px;
+  border-radius: 4px;
+  color: #577780;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  background: #f6f6f6;
+  transition: all 0.2s;
+}
+.blog-tags a:before {
+  content: "#";
+}
+.blog-tags a:hover {
+  color: #fff;
+  background: #a5b5b4;
+}

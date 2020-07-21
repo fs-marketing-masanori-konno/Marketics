@@ -1,0 +1,227 @@
+
+/* =================
+	 archive Style
+================= */
+
+.top-archive-meta{
+	// padding-right: 6px;
+	// padding-left: 6px;
+	.title {
+		font-size: 18px;
+		letter-spacing: 0.6px;
+		line-height: 155%;
+		font-weight: 900;
+		text-align: justify;
+	  color: #42424c;
+	}
+	.archive-date{
+	    font-size: 11px;
+    line-height: 16px;
+    /* padding: 0px; */
+    font-weight: 400;
+    text-align: left;
+    color: #b6bbbb;
+    letter-spacing: 0;
+	}
+}
+.archive-thumb {
+  min-width: 320px;
+  height: 100%;
+  overflow: hidden;
+  margin: 0px auto;
+  position: relative;
+  flex-basis: 30%;
+  img {
+    width: 100%;
+    min-width: 200px;
+    height: auto;
+    transition: transform .5s ease;
+  }
+}
+.archive-item {
+  width: 900px;
+  display: flex;
+  min-height: 196px;
+  margin: auto;
+  border-bottom: solid 3px #efefef;
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+.archive-title {
+  width: 100%;
+  font-size: 17.5px;
+  font-weight: 900;
+  color: #505058;
+  letter-spacing: 0.2px;
+  line-height: 1.45;
+  text-align: justify;
+  padding-top: 4px;
+}
+.archive-name {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 900;
+	background-color: #eeeeef;
+	border-radius: 24px;
+	margin-top: 8px;
+	padding: 0px 12px;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+}
+.archive-company {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 8px;
+  line-height: 20px;
+  margin-left: 6px;
+  margin-right: 12px;
+}
+.archive-detail-company {
+	display: flex;
+  margin-top: 2px;
+  flex-wrap: wrap;
+	li {
+		margin-right: 4px;
+		display: flex;
+	}
+}
+.archive-content {
+	width: 576px;
+  padding-left: 16px;
+  padding-right: 16px;
+  flex-basis: 65%;
+}
+
+/* ===========
+	 Blog Tag
+=========== */
+.archive-on-detail {
+  position: relative;
+  padding-right: 6px;
+  padding-left: 6px;
+  height: 100%;
+}
+.blog-tags {
+	display: flex;
+  flex-wrap: wrap;
+  margin: auto 0;
+  bottom: 0;
+  position: absolute;
+  height: auto;
+	a {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    margin: 3px 6px 3px 0;
+    padding: 0 6px;
+    border-radius: 4px;
+		color: #697a80;
+		letter-spacing: -0.2px;
+		background: #edf1f3;
+		transition: all .2s;
+		&:before {
+			content: "#";
+		}
+	}
+	a:hover {
+		color: #fff;
+		background: #a5b5b4;
+	}
+}
+.media-inner {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	z-index: 1;
+	.media-inner-img{
+		&:after {
+			display: block;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #222;
+			opacity: 0;
+			transition: .25s ease;
+		}
+	}
+}
+a:hover {
+	.media-inner .media-inner-img{
+		&:after {
+			opacity: .25;
+		}
+	 	img {
+			transform: scale(1.14);
+		}
+	}
+}
+.archive-off-detail {
+	border-top: unset;
+	position: relative;
+}
+
+/* Tublet */
+@media screen and (max-width: 1024px) {
+	.archive-detail-company {
+    display: none;
+  }
+	.archive-item {
+    width: 100%;
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+  .archive-thumb {
+    min-width: unset;
+    flex-basis: 35%;
+  }
+	.archive-content {
+		padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+  .archive-on-detail {
+    padding-left: 12px;
+	}
+}
+@media screen and (max-width: 768px) {
+  .archive-title {
+    font-size: 17px;
+    padding-top: 0px;
+  }
+  .archive-thumb,
+  .archive-thumb .media-inner,
+  a:hover .archive-thumb,
+  a:hover .archive-thumb .media-inner {
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+	.blog-tags a {
+    font-weight: 400;
+    font-size: 10px;
+  }
+  .blog-tags {
+  	display: none;
+  }
+  .archive-thumb {
+    min-width: unset;
+    flex-basis: 28%;
+	}
+	.archive-content {
+    flex-basis: 72%;
+  }
+  .top-archive-meta .archive-date {
+    font-size: 10px;
+  }
+  .archive-item {
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+}
+
+
+

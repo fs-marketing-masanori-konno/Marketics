@@ -27,8 +27,15 @@
 			<!-- 検索キーワード未入力 -->
 				<div class="category-eyecatch _search-result">
 					<div class="search-result-box">
-						<h1 class="search-result">検索キーワードが未入力です。</h1>
 						<div class="searchform-box"><?php get_search_form(); ?></div>
+						<div class="heading-search-result">
+							<h1>検索結果</h1>
+							<div class="search-result">
+			        	<span class="search-result-num">0</span>
+		          	<span class="search-result-text">件</span>
+		          </div>
+      			</div>
+						<h1 class="result-keywords">検索キーワードが未入力です。</h1>
 					</div>
 				</div>
 

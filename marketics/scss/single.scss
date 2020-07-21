@@ -1555,9 +1555,12 @@ a:hover .related-article-item-wrap .related-article-thumb:after{
     margin-top: 4px;
   }
   .article-info, .article-body {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 36px;
+    padding-left: 3%;
+    padding-right: 3%;
+    // padding-top: 36px;
+  }
+  .article-body h2 {
+    margin-top: 10px;
   }
    .article-body .box-blue {
     padding: 20px;

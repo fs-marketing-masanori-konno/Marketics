@@ -5,6 +5,36 @@
 /* ----------------------------------------------
 // base
 // ---------------------------------------------- */
+p, h1, h2, dt, dd, div, li {
+  font-family: tbudrgothic-std, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", 游ゴシック, YuGothic, メイリオ, Meiryo, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "palt";
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+}
+
+body {
+  background-color: #19222a;
+}
+
+header {
+  background-color: #fff;
+}
+
 /* ----------------------------------------------
 // layout
 // ---------------------------------------------- */
@@ -75,6 +105,239 @@
     transition: all 0.4s;
   }
 }
+/* =================
+	 archive Style
+================= */
+.top-archive-meta .title {
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  line-height: 155%;
+  font-weight: 900;
+  text-align: justify;
+  color: #42424c;
+}
+.top-archive-meta .archive-date {
+  font-size: 11px;
+  line-height: 16px;
+  /* padding: 0px; */
+  font-weight: 400;
+  text-align: left;
+  color: #b6bbbb;
+  letter-spacing: 0;
+}
+
+.archive-thumb {
+  min-width: 320px;
+  height: 100%;
+  overflow: hidden;
+  margin: 0px auto;
+  position: relative;
+  flex-basis: 30%;
+}
+.archive-thumb img {
+  width: 100%;
+  min-width: 200px;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.archive-item {
+  width: 900px;
+  display: flex;
+  min-height: 196px;
+  margin: auto;
+  border-bottom: solid 3px #efefef;
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+
+.archive-title {
+  width: 100%;
+  font-size: 17.5px;
+  font-weight: 900;
+  color: #505058;
+  letter-spacing: 0.2px;
+  line-height: 1.45;
+  text-align: justify;
+  padding-top: 4px;
+}
+
+.archive-name {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 900;
+  background-color: #eeeeef;
+  border-radius: 24px;
+  margin-top: 8px;
+  padding: 0px 12px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.archive-company {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 8px;
+  line-height: 20px;
+  margin-left: 6px;
+  margin-right: 12px;
+}
+
+.archive-detail-company {
+  display: flex;
+  margin-top: 2px;
+  flex-wrap: wrap;
+}
+.archive-detail-company li {
+  margin-right: 4px;
+  display: flex;
+}
+
+.archive-content {
+  width: 576px;
+  padding-left: 16px;
+  padding-right: 16px;
+  flex-basis: 65%;
+}
+
+/* ===========
+	 Blog Tag
+=========== */
+.archive-on-detail {
+  position: relative;
+  padding-right: 6px;
+  padding-left: 6px;
+  height: 100%;
+}
+
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto 0;
+  bottom: 0;
+  position: absolute;
+  height: auto;
+}
+.blog-tags a {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  margin: 3px 6px 3px 0;
+  padding: 0 6px;
+  border-radius: 4px;
+  color: #697a80;
+  letter-spacing: -0.2px;
+  background: #edf1f3;
+  transition: all 0.2s;
+}
+.blog-tags a:before {
+  content: "#";
+}
+.blog-tags a:hover {
+  color: #fff;
+  background: #a5b5b4;
+}
+
+.media-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+}
+.media-inner .media-inner-img:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  opacity: 0;
+  transition: 0.25s ease;
+}
+
+a:hover .media-inner .media-inner-img:after {
+  opacity: 0.25;
+}
+a:hover .media-inner .media-inner-img img {
+  transform: scale(1.14);
+}
+
+.archive-off-detail {
+  border-top: unset;
+  position: relative;
+}
+
+/* Tublet */
+@media screen and (max-width: 1024px) {
+  .archive-detail-company {
+    display: none;
+  }
+
+  .archive-item {
+    width: 100%;
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+
+  .archive-thumb {
+    min-width: unset;
+    flex-basis: 35%;
+  }
+
+  .archive-content {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+
+  .archive-on-detail {
+    padding-left: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .archive-title {
+    font-size: 17px;
+    padding-top: 0px;
+  }
+
+  .archive-thumb,
+.archive-thumb .media-inner,
+a:hover .archive-thumb,
+a:hover .archive-thumb .media-inner {
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .blog-tags a {
+    font-weight: 400;
+    font-size: 10px;
+  }
+
+  .blog-tags {
+    display: none;
+  }
+
+  .archive-thumb {
+    min-width: unset;
+    flex-basis: 28%;
+  }
+
+  .archive-content {
+    flex-basis: 72%;
+  }
+
+  .top-archive-meta .archive-date {
+    font-size: 10px;
+  }
+
+  .archive-item {
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+}
 /* ----------------------------------------------
 // contents（各ページ固有のスタイル）
 // ---------------------------------------------- */
@@ -87,6 +350,7 @@ p, h1, h2, dt, dd, div, li {
   font-style: normal;
   color: #949494;
   -webkit-font-smoothing: antialiased;
+  font-feature-settings: "palt";
 }
 
 h1 {
@@ -153,13 +417,14 @@ header {
   background: #fff;
   max-height: unset;
   min-height: unset;
+  min-height: 500px;
   height: auto;
 }
 .category-eyecatch._search-result .search-result-box {
   width: 960px;
   padding-right: 30px;
   padding-left: 30px;
-  margin: 40px auto;
+  margin: 60px auto 0;
   text-align: center;
 }
 .category-eyecatch._search-result .searchform-box {
@@ -172,7 +437,7 @@ header {
   border: 2px solid #ddd;
   border-radius: 8px;
   outline: 0;
-  font-size: 12px;
+  font-size: 14px;
   background-color: unset;
 }
 .category-eyecatch._search-result .searchform {
@@ -186,6 +451,25 @@ header {
 .category-eyecatch._search-result .searchform input, .category-eyecatch._search-result .searchform textarea {
   outline: none;
   background-color: unset;
+}
+.category-eyecatch._search-result form.searchform .search-box {
+  display: flex;
+  opacity: 1;
+}
+
+._search-result .result-keywords {
+  margin-top: 36px;
+  font-size: 18px;
+  color: #00173b;
+}
+
+._search-result .header-search-close {
+  display: none;
+}
+
+._search-result .header-search-box-icon {
+  width: 18px;
+  top: 26px;
 }
 
 .cat-title {
@@ -261,38 +545,17 @@ header {
 
 .archive-item {
   width: 900px;
-  min-height: 220px;
+  min-height: 196px;
   margin: auto;
   border-bottom: solid 3px #efefef;
-  padding-bottom: 18px;
-  padding-top: 18px;
+  padding-bottom: 24px;
+  padding-top: 24px;
 }
 .archive-item .archive-itembox {
   display: flex;
   color: #1d244a;
   height: 100%;
   width: 100%;
-}
-
-.blog-tags {
-  margin: 6px 0;
-}
-.blog-tags a {
-  font-family: tbudgothic-std, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 2.2;
-  margin: 8px 6px 8px 0;
-  padding: 3px;
-  border-radius: 4px;
-  color: #577780;
-  letter-spacing: -0.2px;
-  text-decoration: none;
-  background: #f6f6f6;
-}
-.blog-tags a:before {
-  content: "#";
 }
 
 .archive-thumb {
@@ -334,7 +597,7 @@ header {
 a:hover .media-inner:after {
   opacity: 0.25;
 }
-a:hover .archive-thumb img {
+a:hover .media-inner img {
   transform: scale(1.08);
 }
 
@@ -361,7 +624,7 @@ a:hover .archive-thumb .media-inner {
   font-weight: 900;
   color: #505058;
   letter-spacing: 0.2px;
-  line-height: 1.55;
+  line-height: 1.45;
   text-align: justify;
   padding-top: 4px;
 }
@@ -377,14 +640,11 @@ a:hover .archive-thumb .media-inner {
 }
 
 .archive-date {
-  top: 4px;
-  left: 0;
-  font-family: sans-serif;
-  text-align: left;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 16px;
   font-weight: 400;
-  color: #949494;
+  text-align: left;
+  color: #b6bbbb;
   letter-spacing: 0;
 }
 
@@ -436,6 +696,10 @@ a:hover .archive-thumb .media-inner {
 .archive-item._information {
     min-height: 167px;
 }*/
+.searchform-box .func-search-icon {
+  display: none;
+}
+
 /* ============
 	Pagenavi
 ============ */
@@ -557,16 +821,6 @@ a:hover .archive-thumb .media-inner {
   border-bottom: unset;
 }
 
-@media screen and (min-width: 1920px) {
-  .category-content {
-    width: 1920px;
-  }
-
-  .category-eyecatch {
-    width: 1920px;
-    margin: 0 auto;
-  }
-}
 @media screen and (min-width: 1440px) {
   .archive-title {
     width: 100%;

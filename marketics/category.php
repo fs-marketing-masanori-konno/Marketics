@@ -68,6 +68,7 @@
 					'order' => $sortorder,
 					'posts_per_page' => $perpage
 				)); ?>
+	  <ul class="top-archive _information">
 			<?php if($the_query->have_posts()): while($the_query->have_posts() ) : $the_query->the_post(); ?>
 					<?php if ( has_post_thumbnail() ) {
 						$image_id = get_post_thumbnail_id ();
@@ -76,64 +77,78 @@
 					} else {
 						$image_url = get_bloginfo( 'template_directory' ) . '/images/thumbnail.png';
 					} ?>
-			<div class="archive-item _<?php echo $catslug; ?>">
-				<a href="<?php the_permalink(); ?>">
-					<div class="archive-thumb">
-						<div class="media-inner"><?php the_post_thumbnail( 'large' ); ?></div>
-					</div>
-					<div class="archive-content">
-						<div class="archive-on-detail">
-							<p class="archive-title"><?php the_title(); ?></p>
-							<p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
-							<div class="archive-detail-company">
-								<ul>
-								<?php if($parent_slug == "event-report" || $parent_slug=="interview" ): ?>
+			<li class="archive-item _<?php echo $catslug; ?>">
+				<div class="archive-thumb">
+					<a href="<?php the_permalink(); ?>">
+						<div class="media-inner">
+							<div class="media-inner-img">
+		            <?php
+	              if (has_post_thumbnail()){
+	                the_post_thumbnail( 'large' );
+	              } else {
+	                /* アイキャッチ無い場合の画像 */
+	              }	?>
+	            </div>
+            </div>
+					</a>
+					<ul class="archive-detail-company">
+						<?php if($parent_slug == "event-report" || $parent_slug=="interview" ): ?>
 
-									<?php if(have_rows('acf_subcat_speaker')): ?>
-									<?php while(have_rows('acf_subcat_speaker')): the_row(); ?>
-										<?php if(have_rows('repeater-interview')): ?>
-										<?php while(have_rows('repeater-interview')): the_row(); ?>
-										<?php if($parent_slug=="interview") {
-												$groupSubCat_spk = get_sub_field('acf_person_i');
-										} elseif($catChildslug =="b-academy") {
-												$groupSubCat_spk = get_sub_field('acf_person_b');
-										} elseif($catChildslug =="mixer") {
-												$groupSubCat_spk = get_sub_field('acf_person_m');
-										} ?>
-										<?php	foreach ((array)$groupSubCat_spk as $Vi ):
-											$Ti_name = get_field('personal_name', $Vi);
-										?>
-											<?php if(have_rows('personal_company',$Vi)): ?>
-											<?php while(have_rows('personal_company',$Vi)): the_row();
-												$Ti_coName  = get_sub_field('company_name');
-												$Ti_coLabel = get_sub_field('company-label');
-											?>
-										<li>
-											<p class="archive-name"><?php echo $Ti_coName; ?></p>
-												<?php endwhile; ?>
-												<?php endif; ?>
-											<p class="archive-company"><?php echo $Ti_name; ?></p>
-										</li>
-										<?php endforeach; ?>
+							<?php if(have_rows('acf_subcat_speaker')): ?>
+							<?php while(have_rows('acf_subcat_speaker')): the_row(); ?>
+								<?php if(have_rows('repeater-interview')): ?>
+								<?php while(have_rows('repeater-interview')): the_row(); ?>
+								<?php if($parent_slug=="interview") {
+										$groupSubCat_spk = get_sub_field('acf_person_i');
+								} elseif($catChildslug =="b-academy") {
+										$groupSubCat_spk = get_sub_field('acf_person_b');
+								} elseif($catChildslug =="mixer") {
+										$groupSubCat_spk = get_sub_field('acf_person_m');
+								} ?>
+								<?php	foreach ((array)$groupSubCat_spk as $Vi ):
+									$Ti_name = get_field('personal_name', $Vi);
+								?>
+									<?php if(have_rows('personal_company',$Vi)): ?>
+									<?php while(have_rows('personal_company',$Vi)): the_row();
+										$Ti_coName  = get_sub_field('company_name');
+										$Ti_coLabel = get_sub_field('company-label');
+									?>
+								<li>
+									<p class="archive-name"><?php echo $Ti_coName; ?></p>
 										<?php endwhile; ?>
 										<?php endif; ?>
-									<?php endwhile; ?>
-									<?php endif; ?>
-								</ul>
-
-								<?php elseif($parent_slug=="library" || $parent_slug=="marketing" || $parent_slug=="information"): ?>
-									<div class="archive-off-detail">
-										<p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
-									</div>
+									<p class="archive-company"><?php echo $Ti_name; ?></p>
+								</li>
+								<?php endforeach; ?>
+								<?php endwhile; ?>
 								<?php endif; ?>
-							</div>
+							<?php endwhile; ?>
+							<?php endif; ?>
+
+
+						<?php elseif($parent_slug=="library" || $parent_slug=="marketing" || $parent_slug=="information"): ?>
+							<!-- undefined -->
+						<?php endif; ?>
+					</ul>
+				</div>
+				<div class="archive-content">
+					<div class="archive-on-detail">
+	          <div class="top-archive-meta">
+							<a href="<?php the_permalink(); ?>">
+								<p class="archive-title"><?php the_title(); ?></p>
+							</a>
+							<p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
+						</div>
+		          <div class="blog-tags">
+            		<?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
+        			</div>
 						</div>
 					</div>
-				</a>
-			</div>
-			<?php endwhile; ?>
-			<?php wp_pagenavi(array('query' => $the_query)); ?>
-		<?php endif; ?>
+				</li>
+				<?php endwhile; ?>
+				<?php wp_pagenavi(array('query' => $the_query)); ?>
+			<?php endif; ?>
+		</ul>
 	</div> <!-- content-box-inner -->
 </div> <!-- content-box -->
 </div> <!-- category-content -->

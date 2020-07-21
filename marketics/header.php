@@ -85,8 +85,8 @@
 		<div class="l-header-inner">
 			<div class="l-header-content">
 				<div class="header-logo" id="pagetop"><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/common/logo.png" alt="<?php bloginfo('name'); ?>" class="logo" /></a></div>
-				<nav class="global-nav global-nav__list"　id="glonav">
-					<div class="l-left">
+				<div class="l-left gloval-menu">
+					<nav class="global-nav global-nav__list js-header-navi"　id="glonav">
 						<ul class="glonav">
 							<li class="global-nav__item" itemprop="hasPart" itemscope ><a itemprop="url" href="<?php bloginfo('url'); ?>/interview/">
 								<span class="nav-txt-en" itemprop="name">Interview</span><span class="nav-txt-jp">インタビュー</span></a></li>
@@ -99,19 +99,19 @@
 							<li class="global-nav__item" itemprop="hasPart" itemscope ><a itemprop="url" href="<?php bloginfo('url'); ?>/information/">
 								<span class="nav-txt-en" itemprop="name">Information</span><span class="nav-txt-jp">インフォメーション</span></a></li>
 						</ul>
-						<div class="searchform-box"><?php get_search_form(); ?></div>
-					</div>
-					<div class="l-right _nav">
-						<div class="subnav l-right">
-							<div class="intro-nav-btn intro-nav-btn-mailmz" itemprop="hasPart" itemscope itemtype="http://schema.org/ContactPage">
-								<a itemprop="url" href="https://bdash-marketing.com/mailmz/"><img class="txt_img" src="<?php bloginfo('template_directory'); ?>/images/common/nav_mailmz_txt.png" alt="メルマガ登録"><span class="txt_html" itemprop="name">メルマガ登録</span></a>
-							</div>
-							<div class="intro-nav-btn intro-nav-btn-contact" itemprop="hasPart" itemscope itemtype="http://schema.org/ContactPage">
-								<a itemprop="url" href="https://bdash-marketing.com/req_material/"><img class="txt_img" src="<?php bloginfo('template_directory'); ?>/images/common/nav_contact_txt.png" alt="お問い合わせ"><span class="txt_html" itemprop="name">お問い合わせ</span></a>
-							</div>
+					</nav>
+					<?php get_search_form(); ?>
+				</div>
+				<div class="l-right _nav">
+					<div class="subnav l-right">
+						<div class="intro-nav-btn intro-nav-btn-mailmz" itemprop="hasPart" itemscope itemtype="http://schema.org/ContactPage">
+							<a itemprop="url" href="https://bdash-marketing.com/mailmz/"><img class="txt_img" src="<?php bloginfo('template_directory'); ?>/images/common/nav_mailmz_txt.png" alt="メルマガ登録"><span class="txt_html" itemprop="name">メルマガ登録</span></a>
+						</div>
+						<div class="intro-nav-btn intro-nav-btn-contact" itemprop="hasPart" itemscope itemtype="http://schema.org/ContactPage">
+							<a itemprop="url" href="https://bdash-marketing.com/req_material/"><img class="txt_img" src="<?php bloginfo('template_directory'); ?>/images/common/nav_contact_txt.png" alt="お問い合わせ"><span class="txt_html" itemprop="name">お問い合わせ</span></a>
 						</div>
 					</div>
-				</nav>
+				</div>
 			</div>
 			<div class="hamburger" id="js-hamburger">
 				<span class="hamburger__line hamburger__line--1"></span>

@@ -100,13 +100,15 @@
       <div class="top-archive-thumb">
         <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
-            <?php
-              if (has_post_thumbnail()){
-                the_post_thumbnail( 'large' );
-              } else {
-                /* アイキャッチ無い場合の画像 */
-              }
-            ?>
+            <div class="media-inner-img">
+              <?php
+                if (has_post_thumbnail()){
+                  the_post_thumbnail( 'large' );
+                } else {
+                  /* アイキャッチ無い場合の画像 */
+                }
+              ?>
+            </div>
           </div>
         </a>
       </div>
@@ -117,9 +119,9 @@
               <p class="title"><?php the_title(); ?></p>
             </a>
             <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
-            <div class="blog-tags">
-              <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
-            </div>
+          </div>
+          <div class="blog-tags">
+            <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
           </div>
         </div>
       </div>
@@ -156,13 +158,15 @@
       <div class="top-archive-thumb">
         <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
-            <?php
-              if (has_post_thumbnail()){
-                the_post_thumbnail( 'large' );
-              } else {
-                /* アイキャッチ無い場合の画像 */
-              }
-            ?>
+            <div class="media-inner-img">
+              <?php
+                if (has_post_thumbnail()){
+                  the_post_thumbnail( 'large' );
+                } else {
+                  /* アイキャッチ無い場合の画像 */
+                }
+              ?>
+            </div>
           </div>
         </a>
       </div>
@@ -173,9 +177,9 @@
               <p class="title"><?php the_title(); ?></p>
             </a>
             <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
-            <div class="blog-tags">
-              <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
-            </div>
+          </div>
+          <div class="blog-tags">
+            <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
           </div>
         </div>
       </div>
@@ -212,13 +216,15 @@
       <div class="top-archive-thumb">
         <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
-            <?php
-              if (has_post_thumbnail()){
-                the_post_thumbnail( 'large' );
-              } else {
-                /* アイキャッチ無い場合の画像 */
-              }
-            ?>
+            <div class="media-inner-img">
+              <?php
+                if (has_post_thumbnail()){
+                  the_post_thumbnail( 'large' );
+                } else {
+                  /* アイキャッチ無い場合の画像 */
+                }
+              ?>
+            </div>
           </div>
         </a>
       </div>
@@ -229,9 +235,9 @@
               <p class="title"><?php the_title(); ?></p>
             </a>
             <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
-            <div class="blog-tags">
-              <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
-            </div>
+          </div>
+          <div class="blog-tags">
+            <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
           </div>
         </div>
       </div>
@@ -268,13 +274,15 @@
       <div class="top-archive-thumb">
         <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
-            <?php
-              if (has_post_thumbnail()){
-                the_post_thumbnail( 'large' );
-              } else {
-                /* アイキャッチ無い場合の画像 */
-              }
-            ?>
+            <div class="media-inner-img">
+              <?php
+                if (has_post_thumbnail()){
+                  the_post_thumbnail( 'large' );
+                } else {
+                  /* アイキャッチ無い場合の画像 */
+                }
+              ?>
+            </div>
           </div>
         </a>
       </div>
@@ -285,9 +293,9 @@
               <p class="title"><?php the_title(); ?></p>
             </a>
             <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
-            <div class="blog-tags">
-              <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
-            </div>
+          </div>
+          <div class="blog-tags">
+            <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
           </div>
         </div>
       </div>
@@ -324,13 +332,15 @@
       <div class="top-archive-thumb">
         <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
-            <?php
-              if (has_post_thumbnail()){
-                the_post_thumbnail( 'large' );
-              } else {
-                /* アイキャッチ無い場合の画像 */
-              }
-            ?>
+            <div class="media-inner-img">
+              <?php
+                if (has_post_thumbnail()){
+                  the_post_thumbnail( 'large' );
+                } else {
+                  /* アイキャッチ無い場合の画像 */
+                }
+              ?>
+            </div>
           </div>
         </a>
       </div>
@@ -341,9 +351,9 @@
               <p class="title"><?php the_title(); ?></p>
             </a>
             <p class="archive-date"><time datetime="<?php echo get_the_time( 'Y-m-d' ); ?>"><?php echo the_date( 'Y/m/d' ); ?></time></p>
-            <div class="blog-tags">
-              <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
-            </div>
+          </div>
+          <div class="blog-tags">
+            <?php echo get_the_term_list( $post->ID, 'tagcat'); ?>
           </div>
         </div>
       </div>

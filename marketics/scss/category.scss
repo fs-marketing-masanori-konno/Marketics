@@ -440,6 +440,9 @@ a:hover .archive-thumb .media-inner {
     background: #008cef;
     color: #fff;
   }
+  .cat-title h1 {
+    font-size: 36px;
+  }
 }
 @media screen and (max-width: 480px) {
   .subnav li {
@@ -455,6 +458,9 @@ a:hover .archive-thumb .media-inner {
     left: 0;
     vertical-align: middle;
     margin: auto;
+  }
+  .category-eyecatch img {
+    width: 220px;
   }
  //  .category-eyecatch{
  //  	height: 120px;

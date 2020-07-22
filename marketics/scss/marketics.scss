@@ -315,7 +315,7 @@ nav {
 .footer-nav {
   background-color: #2f3f4d;
   color: #fff;
-  z-index: 100;
+  z-index: 90;
   position: relative;
   ul,li,a,p {
     font-family: bc-alphapipe, sans-serif;
@@ -796,6 +796,8 @@ nav {
     }
     .glonav {
       margin-right: 0;
+      height: 100%;
+      height: unset;
     }
   }
   .global-nav {
@@ -890,12 +892,36 @@ nav {
     top: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 100;
+    z-index: 120;
     background-color: #000;
     opacity: 0;
     visibility: hidden;
     transition: all .6s;
     cursor: pointer;
+  }
+  .single,
+  .home,
+  .category {
+    .l-right._nav {
+      position: fixed;
+      right: -320px;
+      width: 278px;
+      z-index: 300;
+      left: unset;
+      margin: unset;
+      transition: all 0.4s;
+    }
+  }
+  .single,
+  .home,
+  .category {
+    &.nav-open {
+      .l-right._nav {
+        right: 0px;
+        display: block;
+        transition: all 0.4s;
+      }
+    }
   }
   nav .l-right {
     margin: 0 auto;
@@ -909,6 +935,7 @@ nav {
   .intro-nav-btn a .txt_html {
     display: block;
     font-size: 15px;
+    transition: all .4s;
   }
   .intro-nav-btn-mailmz a {
     background: url(../images/common/icon_mailmz.png) no-repeat 15px center/34px,linear-gradient(45deg,#006faf,#30b2e5);
@@ -936,6 +963,7 @@ nav {
     .global-nav {
       right: 0;
       display: block;
+      transition: all .4s;
     }
     .black-bg {
       opacity: .8;
@@ -953,6 +981,9 @@ nav {
       transform: rotate(-45deg);
       top: 20px;
     }
+  }
+  .category .l-right._nav {
+    display: none;
   }
 }
 

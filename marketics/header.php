@@ -103,14 +103,16 @@
 					<?php get_search_form(); ?>
 				</div>
 				<div class="l-right _nav">
-					<div class="subnav l-right">
-						<div class="intro-nav-btn intro-nav-btn-mailmz" itemprop="hasPart" itemscope itemtype="http://schema.org/ContactPage">
-							<a itemprop="url" href="https://bdash-marketing.com/mailmz/"><img class="txt_img" src="<?php bloginfo('template_directory'); ?>/images/common/nav_mailmz_txt.png" alt="メルマガ登録"><span class="txt_html" itemprop="name">メルマガ登録</span></a>
+					<nav class="global-nav__list js-header-navi"　id="glonav">
+						<div class="subnav l-right">
+							<div class="intro-nav-btn intro-nav-btn-mailmz" itemprop="hasPart" itemscope itemtype="http://schema.org/ContactPage">
+								<a itemprop="url" href="https://bdash-marketing.com/mailmz/"><img class="txt_img" src="<?php bloginfo('template_directory'); ?>/images/common/nav_mailmz_txt.png" alt="メルマガ登録"><span class="txt_html" itemprop="name">メルマガ登録</span></a>
+							</div>
+							<div class="intro-nav-btn intro-nav-btn-contact" itemprop="hasPart" itemscope itemtype="http://schema.org/ContactPage">
+								<a itemprop="url" href="https://bdash-marketing.com/req_material/"><img class="txt_img" src="<?php bloginfo('template_directory'); ?>/images/common/nav_contact_txt.png" alt="お問い合わせ"><span class="txt_html" itemprop="name">お問い合わせ</span></a>
+							</div>
 						</div>
-						<div class="intro-nav-btn intro-nav-btn-contact" itemprop="hasPart" itemscope itemtype="http://schema.org/ContactPage">
-							<a itemprop="url" href="https://bdash-marketing.com/req_material/"><img class="txt_img" src="<?php bloginfo('template_directory'); ?>/images/common/nav_contact_txt.png" alt="お問い合わせ"><span class="txt_html" itemprop="name">お問い合わせ</span></a>
-						</div>
-					</div>
+					</nav>
 				</div>
 			</div>
 			<div class="hamburger" id="js-hamburger">

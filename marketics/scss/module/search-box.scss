@@ -38,6 +38,7 @@
 		border-radius: 20px;
 		background: #fff;
 		display: block;
+    // display: none;
 		opacity: 1;
 		width: 317px;
 		-webkit-transition: opacity .25s ease .3s,width 0s linear .3s;
@@ -45,11 +46,12 @@
 }
 .header-search-box-icon {
 	position: absolute;
-	top: 14px;
-	left: 16px;
+	top: 13px;
+	left: 13px;
 	font-size: 16px;
 	color: #666;
-  z-index: 1;
+	z-index: 1;
+	width: 16px;
 }
 ::placeholder {
 	color: #666;
@@ -172,18 +174,24 @@ button .icon-search {
   color: #bbb;
 }
 nav.js-header-navi {
-	display: block;
+  animation: fadeIn .3s .3s;
+  animation-fill-mode: both;
 }
 nav.js-header-navi.header-navi-hide {
-	display: none;
+  animation: fadeOut .3s;
+  animation-fill-mode: both;
 }
 form.searchform .search-box {
-  opacity: 0;
-  display: none;
+  animation: fadeOut .3s;
+  animation-fill-mode: both;
 }
 form.searchform.search-open .search-box {
-	opacity: 1;
-  display: block;
+  animation: fadeIn .3s .3s;
+  animation-fill-mode: both;
+}
+.func-search-icon{
+  animation: fadeIn .3s .3s;
+  animation-fill-mode: both;
 }
 button.header-search-box-submit .icon-search {
   top: 9px;
@@ -203,9 +211,20 @@ button.header-search-box-submit .icon-search {
 }
 .gloval-menu .header-search-close {
   opacity: 0;
-  display: none;
+  transition: .4s;
 }
-
+@keyframes fadeIn {
+  0% { opacity: 0; display: block;}
+  100% { opacity: 1;}
+}
+@keyframes fadeOut {
+  0% { opacity: 1;}
+  100% { opacity: 0; display: none;}
+}
+@keyframes fadeInFlex {
+  0% { opacity: 0; display: flex;}
+  100% { opacity: 1;}
+}
 
 
 

@@ -121,7 +121,7 @@ h1 {
   // padding-top: 40px;
   flex-basis: 20%;
   // min-width: 240px;
-  min-width: 180px;
+  min-width: 220px;
   position: relative;
   a {
     margin: auto;
@@ -219,6 +219,7 @@ nav {
 }
 .home ,
 .category,
+.tax-tagcat,
 .single {
   .l-right {
     width: fit-content;
@@ -231,9 +232,10 @@ nav {
     /* right: 50%; */
     display: block;
     z-index: 10;
-    margin-left: 24px;
-    flex-basis: 220px;
-    width: fit-content;
+    // margin-left: 24px;
+    // flex-basis: 220px;
+    // width: fit-content;
+    width: 280px;
     }
     li {
       height: fit-content;
@@ -784,6 +786,7 @@ nav {
   }
   .category,
   .home,
+  .tax-tagcat,
   .single {
     .l-right._nav {
       right: 0;
@@ -901,6 +904,7 @@ nav {
   }
   .single,
   .home,
+  .tax-tagcat,
   .category {
     .l-right._nav {
       position: fixed;
@@ -914,6 +918,7 @@ nav {
   }
   .single,
   .home,
+  .tax-tagcat,
   .category {
     &.nav-open {
       .l-right._nav {
@@ -952,7 +957,8 @@ nav {
     }
   }
   .home,
-  .category {
+  .category,
+  .tax-tagcat {
     .l-right {
       position: relative;
       width: 80%;
@@ -982,18 +988,68 @@ nav {
       top: 20px;
     }
   }
-  .category .l-right._nav {
-    display: none;
+  // .category .l-right._nav {
+  //   display: none;
+  // }
+  .searchform {
+    margin-right: 34px;
+    margin-top: 0;
+  }
+  .searchform .search-box {
+    width: 70vw;
+    max-width: 317px;
+    height: 34px;
+    margin-right: 0;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .searchfield {
+    padding: 10px 20px 7px 38px;
+  }
+  .header-search-box-icon {
+    top: 13px;
+    left: 13px;
+  }
+  .header-search-box-icon {
+    top: 9px;
+    left: 11px;
+  }
+  button.header-search-box-submit .icon-search {
+    top: 4px;
+    font-size: 12px;
+  }
+  .func-search-icon {
+    width: 21px;
+  }
+  .header-inner .l-header-inner {
+    padding-right: 34px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .header-logo {
     margin: auto;
+    margin-left: 0;
+    height: 48px;
+    width: 120px;
+    min-width: 160px;
+  }
+  .logo {
+    width: 150px;
   }
   .header-inner {
     // position: inherit;
     top: 0px;
+    // height: 100px;
+  }
+  .header-inner .l-header-content {
+    height: 60px;
+  }
+  .l-left.gloval-menu {
+    flex-basis: unset;
+  }
+  .searchform {
+    margin-right: 36px;
   }
   .nav-txt-en {
     font-size: 15.5px;
@@ -1115,6 +1171,19 @@ nav {
     font-weight: 700;
     font-style: normal;
     padding: 8px 0px;
+  }
+  .header-inner .l-header-inner {
+    padding: 0 4px;
+  }
+  .hamburger
+    width: 32px;
+  }
+  .searchform {
+    .searchform {
+    margin-right: 0;
+    top: 10px;
+    right: 42px;
+    position: absolute;
   }
 }
 

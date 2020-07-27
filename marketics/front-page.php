@@ -381,52 +381,64 @@
     <div class="ebook-content">
       <?php
         $ebookurl    = "https://bdash-marketing.com/downloadlist/";
-        $ebooktitleA = "新・アパレルECの勝ち方";
+
         $ebookA      = $ebookurl ."marketing-trend/wpdl_spj_the-winning-method_apparel-ec/";
-        $ebooktitleB = "業界別MA施策31選 単品通販型ビジネス編";
+        $ebooktitleA = "新・アパレルECの勝ち方";
+        $filenameA   = "Cover_ApparelEC-Winning-Method.png";
+
         $ebookB      = $ebookurl ."market_report/wpdl_mkt-measure-collection_sgit_e-shpg/";
-        $ebooktitleC = "マーケティングオートメーション徹底解剖";
+        $ebooktitleB = "業界別MA施策31選 単品通販型ビジネス編";
+        $filenameB   = "Cover_MA_tanpin_EC.png";
+
         $ebookC      = $ebookurl ."market_report/wpdl_makaibo_new/";
-        $ebooktitleD = "本当は教えたくない オムニチャネル最前線 Vol.2";
+        $ebooktitleC = "マーケティングオートメーション徹底解剖";
+        $filenameC   = "Cover_MA-Kaibo.png";
+
         $ebookD      = $ebookurl ."market_report/wpdl_omni-channel_front-line_vol2/";
-        $ebooktitleE = "新・アパレルECの勝ち方";
-        $ebookE      = $ebookurl ."marketing-trend/wpdl_spj_the-winning-method_apparel-ec/";
-        $ebooktitleF = "業界別MA施策31選 単品通販型ビジネス編";
-        $ebookF      = $ebookurl ."market_report/wpdl_mkt-measure-collection_sgit_e-shpg/";
+        $ebooktitleD = "本当は教えたくない オムニチャネル最前線 Vol.2";
+        $filenameD   = "Cover_Omni_ch_FrontLine_vol2.png";
+
+        $ebookE      = $ebookurl ."marketing-tool/wpdl_mazuyomi_ma-tool-replace/";
+        $ebooktitleE = "MAツールリプレイスを検討する人がまず読む本";
+        $filenameE   = "Cover_mazuyomi_ma-tool-replace.jpg";
+
+        $ebookF      = $ebookurl ."cases-measures/wpdl_mkt-kpi-dictionary/";
+        $ebooktitleF = "マーケティングで成果を上げるためのKPI時点";
+        $filenameF   = "Cover_mkt-kpi-dictionary.jpg";
       ?>
       <div class="whitepaper _01">
         <a href="<?php echo $ebookA; ?>?ref=marketics-front">
-        <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_ApparelEC-Winning-Method.png" alt="<?php echo $ebooktitleA; ?>" class="" /><br />
+        <img src="<?php bloginfo('template_directory'); ?>/images/common/<?php echo $fiilenameA; ?>" alt="<?php echo $ebooktitleA; ?>" class="" /><br />
           <p><?php echo $ebooktitleA; ?></p>
         </a>
       </div>
       <div class="whitepaper _02">
         <a href="<?php echo $ebookB; ?>?ref=marketics-front">
-        <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA_tanpin_EC.png" alt="<?php echo $ebooktitleB; ?>" class="" /><br />
+        <img src="<?php bloginfo('template_directory'); ?>/images/common/<?php echo $fiilenameB; ?>" alt="<?php echo $ebooktitleB; ?>" class="" /><br />
           <p><?php echo $ebooktitleB; ?></p>
         </a>
       </div>
       <div class="whitepaper _03">
         <a href="<?php echo $ebookC; ?>?ref=marketics-front">
-          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA-Kaibo.png" alt="<?php echo $ebooktitleC; ?>" class="" /><br />
+          <img src="<?php bloginfo('template_directory'); ?>/images/common/<?php echo $fiilenameC; ?>" alt="<?php echo $ebooktitleC; ?>" class="" /><br />
           <p><?php echo $ebooktitleC; ?></p>
         </a>
       </div>
       <div class="whitepaper _04">
         <a href="<?php echo $ebookD; ?>?ref=marketics-front">
-          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_Omni_ch_FrontLine_vol2.png" alt="<?php echo $ebooktitleD; ?>" class="" /><br />
+          <img src="<?php bloginfo('template_directory'); ?>/images/common/<?php echo $fiilenameD; ?>" alt="<?php echo $ebooktitleD; ?>" class="" /><br />
           <p><?php echo $ebooktitleD; ?></p>
         </a>
       </div>
       <div class="whitepaper _05">
         <a href="<?php echo $ebookE; ?>?ref=marketics-front">
-          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_ApparelEC-Winning-Method.png" alt="<?php echo $ebooktitleE; ?>" class="" /><br />
+          <img src="<?php bloginfo('template_directory'); ?>/images/common/<?php echo $fiilenameE; ?>" alt="<?php echo $ebooktitleE; ?>" class="" /><br />
           <P><?php echo $ebooktitleE; ?></P>
         </a>
       </div>
       <div class="whitepaper _06">
         <a href="<?php echo $ebookF; ?>?ref=marketics-front">
-          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA_tanpin_EC.png" alt="<?php echo $ebooktitleF; ?>" class="" /><br />
+          <img src="<?php bloginfo('template_directory'); ?>/images/common/<?php echo $fiilenameF; ?>" alt="<?php echo $ebooktitleF; ?>" class="" /><br />
           <p><?php echo $ebooktitleF; ?></p>
         </a>
       </div>

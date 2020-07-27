@@ -2,7 +2,7 @@
   <?php $search_query  = get_search_query(); ?>
   <div class="func-search-icon"><img src="<?php bloginfo('template_directory'); ?>/images/common/search-icon.svg"></div>
   <div class="search-window">
-  	<div class="search-box" style="display: none;">
+  	<div class="search-box"　style="display: none;">
       <span class="header-search-box-icon icon-search">
         <img src="<?php bloginfo('template_directory'); ?>/images/common/search-icon.svg">
       </span>
@@ -22,16 +22,20 @@
 <script>
   $('.l-left .func-search-icon').on("click", function(){
     $('.js-search-window').addClass('search-open');
-    $('.js-header-navi').addClass('header-navi-hide');
-    $(this).css('opacity', '0').delay(300).css('display', 'none');
-    $('.gloval-menu .header-search-close').css('display', 'block').delay(300).css('opacity', '1');
-    $('.js-search-window .search-window .search-window').removeClass('header-navi-hide');
+    $('.header-logo').addClass('logo-hide');
+    $('.hamburger').addClass('logo-hide');
+    $('.js-header-navi').addClass('header-navi-hide').delay(300).css('display', 'none');
+    $('.gloval-menu .func-search-icon').delay(300).css('display', 'none');
+    $('.gloval-menu .search-box').delay(300).css('display', 'block')
+    $('.gloval-menu .search-window').delay(1000).css('display', 'flex');
   });
   $('.gloval-menu .header-search-close').on('click', function(){
     $('.js-search-window').removeClass('search-open');
-    $('.js-header-navi').removeClass('header-navi-hide');
-    $('.l-left .func-search-icon').css('display', 'block').delay(300).css('opacity', '1');
-    $('.js-search-window .search-window').removeClass('header-navi-hide');
-    $(this).css('opacity', '0').delay(300).css('display', 'none');
+    $('.header-logo').removeClass('logo-hide');
+    $('.hamburger').removeClass('logo-hide');
+    $('.js-header-navi').removeClass('header-navi-hide').delay(300).css('display', 'block');
+    $('.gloval-menu .func-search-icon').delay(300).css('display', 'block');
+    $('.gloval-menu .search-box').delay(300).css('display', 'none');
+    $('.gloval-menu .search-window').delay(1000).css('display', 'none');
   });
 </script>

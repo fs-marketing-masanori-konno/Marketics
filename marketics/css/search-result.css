@@ -267,6 +267,10 @@ a:hover .media-inner .media-inner-img img {
   position: relative;
 }
 
+.top-archive-meta {
+  margin-bottom: 54px;
+}
+
 /* Tublet */
 @media screen and (max-width: 1024px) {
   .archive-detail-company {
@@ -275,8 +279,9 @@ a:hover .media-inner .media-inner-img img {
 
   .archive-item {
     width: 100%;
-    padding-bottom: 12px;
-    padding-top: 12px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    min-height: 100%;
   }
 
   .archive-thumb {
@@ -305,6 +310,14 @@ a:hover .media-inner .media-inner-img img {
 a:hover .archive-thumb,
 a:hover .archive-thumb .media-inner {
     border-radius: 10px;
+  }
+
+  .blog-tags {
+    position: relative;
+  }
+
+  .top-archive-meta {
+    margin-bottom: 12px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -452,6 +465,14 @@ header {
 .category-eyecatch._search-result form.searchform .search-box {
   display: flex;
   opacity: 1;
+}
+
+.search-results .category-eyecatch._search-result {
+  min-height: 0;
+}
+
+.search-results form.searchform .search-window {
+  display: block;
 }
 
 ._search-result .result-keywords {

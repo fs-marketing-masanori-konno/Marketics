@@ -35,7 +35,7 @@
   padding-top: 80px;
 
   @media screen and (max-width: 768px) {
-    padding-top: 0px;
+    padding-top: 14px;
   }
 }
 .category-eyecatch {
@@ -311,6 +311,14 @@ a:hover .archive-thumb .media-inner {
 	// 	width: 1920px;
 	// 	margin: 0 auto;
 	// }
+}
+@media screen and (min-width: 1024px) {
+  .archive-on-detail {
+    padding-left: 24px;
+  }
+  .archive-title {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 960px) {
   // .archive-item {

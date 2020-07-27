@@ -131,6 +131,12 @@ header{
     opacity: 1;
   }
 }
+.search-results .category-eyecatch._search-result {
+  min-height: 0;
+}
+.search-results form.searchform .search-window {
+  display: block;
+}
 ._search-result .result-keywords {
   margin-top: 36px;
   font-size: 18px;

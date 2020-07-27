@@ -26,6 +26,7 @@
 	// margin: 0 0 0 auto;
  	// margin: 0 0 0 24px;
   margin-right: 20px;
+  margin-top: 6px;
 	-webkit-transition: opacity .25s ease 0s,width 0s linear 0s;
 	transition: opacity .25s ease 0s,width 0s linear 0s;
 }
@@ -169,6 +170,7 @@ button .icon-search {
   width: 28px;
   color: #00173B;
   cursor: pointer;
+  transform: translate(0px, 2px);
 }
 .search-box input::placeholder {
   color: #bbb;
@@ -181,14 +183,16 @@ nav.js-header-navi.header-navi-hide {
   animation: fadeOut .3s;
   animation-fill-mode: both;
 }
-form.searchform .search-box {
-  animation: fadeOut .3s;
-  animation-fill-mode: both;
-}
-form.searchform.search-open .search-box {
-  animation: fadeIn .3s .3s;
-  animation-fill-mode: both;
-}
+
+	form.searchform .search-window {
+	  animation: fadeOut .3s;
+	  animation-fill-mode: both;
+	}
+	form.searchform.search-open .search-window {
+	  animation: fadeIn .3s .3s;
+	  animation-fill-mode: both;
+	}
+
 .func-search-icon{
   animation: fadeIn .3s .3s;
   animation-fill-mode: both;
@@ -209,22 +213,45 @@ button.header-search-box-submit .icon-search {
 	right: 0;
 	z-index: 10;
 }
-.gloval-menu .header-search-close {
-  opacity: 0;
-  transition: .4s;
-}
+// .gloval-menu .header-search-close {
+//   opacity: 0;
+//   transition: .4s;
+// }
 @keyframes fadeIn {
-  0% { opacity: 0; display: block;}
+  0% { opacity: 0;}
   100% { opacity: 1;}
 }
 @keyframes fadeOut {
   0% { opacity: 1;}
-  100% { opacity: 0; display: none;}
+  100% { opacity: 0;}
 }
 @keyframes fadeInFlex {
   0% { opacity: 0; display: flex;}
   100% { opacity: 1;}
 }
+
+.l-left.gloval-menu {
+  width: 680px;
+  flex-basis: 680px;
+}
+@media screen and (max-width: 1024px) {
+  .hamburger.logo-hide{
+    display: none;
+  }
+  .header-logo.logo-hide {
+    display: none;
+  }
+  .hamburger{
+	  animation: fadeIn .3s .3s;
+  	animation-fill-mode: both;
+  }
+  .header-logo {
+	  animation: fadeIn .3s .3s;
+  	animation-fill-mode: both;
+  }
+}
+
+
 
 
 

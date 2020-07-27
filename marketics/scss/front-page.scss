@@ -219,7 +219,7 @@ a:hover .media-inner {
 .section-button {
 	text-align: center;
 	padding-top: 36px;
-  padding-bottom: 36px;
+  padding-bottom: 54px;
 	a {
 		display: inline-block;
 		position: relative;
@@ -979,7 +979,7 @@ a:hover .media-inner {
 
 @media screen and (max-width: 768px) {
 	.header-eyecatch {
-		padding-top: 0px;
+		padding-top: 14px;
 	}
 	.top-archive {
 		padding-right: 12px;
@@ -1015,8 +1015,8 @@ a:hover .media-inner {
 	}
 	.top-archive-thumb,
 	a:hover .top-archive-thumb,
-	.top-archive-thumb .media-inner,
-	a:hover .top-archive-thumb .media-inner {
+	.media-inner,
+	a:hover .media-inner {
 		border-radius: 12px;
 	}
 	a:before {
@@ -1066,6 +1066,7 @@ a:hover .media-inner {
   }
   .top-section .cat_name_heading {
     padding-top: 36px;
+    background-position-y: 18px;
   }
 	// .section-button {
 	// 	margin-top: 36px;
@@ -1090,10 +1091,10 @@ a:hover .media-inner {
 	// .top-section .cat_name_heading {
 	// 	padding-bottom: 40px;
 	// }
-	.top-slide.slick-slider,
-	.slick-slider.slider-for {
-		padding-top: 34px;
-	}
+	// .top-slide.slick-slider,
+	// .slick-slider.slider-for {
+	// 	padding-top: 34px;
+	// }
 	/* ==== Slider 768 ==== */
 	.slick-list {
 			height: 420px;
@@ -1348,6 +1349,10 @@ a:hover .media-inner {
   .slick-arrow.slick-prev {
     left: calc(50% - 150px);
   }
+  .top-archive-meta .title {
+    font-size: 15px;
+    line-height: 1.4;
+	}
 }
 @media screen and (max-width: 375px) {
 

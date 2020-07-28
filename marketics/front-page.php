@@ -101,11 +101,8 @@
         <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
             <div class="media-inner-img">
-<!-- 
               <picture>
                 <source type="image/webp" srcset="<?php bloginfo('template_directory'); ?>/images/common/article-webp/marketics-<?php the_ID(); ?>.jpg.webp" alt="" />
-                <img src="test.png">
-              </picture> -->
                 <?php
                   if (has_post_thumbnail()){
                     the_post_thumbnail( 'large' );
@@ -113,6 +110,7 @@
                     /* アイキャッチ無い場合の画像 */
                   }
                 ?>
+              </picture>
             </div>
           </div>
         </a>
@@ -165,6 +163,7 @@
           <div class="media-inner">
             <div class="media-inner-img">
               <picture>
+                <source type="image/webp" srcset="<?php bloginfo('template_directory'); ?>/images/common/article-webp/marketics-<?php the_ID(); ?>.jpg.webp" alt="" />
                 <?php
                   if (has_post_thumbnail()){
                     the_post_thumbnail( 'large' );

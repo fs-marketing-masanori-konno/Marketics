@@ -22,7 +22,7 @@
 	  <div class="top-slider-item-wrap">
 	      <a href="<?php bloginfo('url'); ?>/interview/160/">
 	        <div class="header-thumb">
-	          <img src="<?php echo get_the_post_thumbnail_url( 160 ); ?>" alt="" style="width: unset;">
+              <img src="<?php echo get_the_post_thumbnail_url( 160 ); ?>" alt="" style="width: unset;" />
 	        </div>
 	        <div class="caption-box">
 	          <p class="caption"><?php echo get_the_title( 160 ); ?></p>
@@ -32,7 +32,7 @@
 	  <div class="top-slider-item-wrap">
 	    <a href="<?php bloginfo('url'); ?>/interview/110/">
 	      <div class="header-thumb">
-	        <img src="<?php echo get_the_post_thumbnail_url( 110 ); ?>" alt="" style="width: unset;">
+            <img src="<?php echo get_the_post_thumbnail_url( 110 ); ?>" alt="" style="width: unset;">
 	      </div>
 	      <div class="caption-box">
 	        <p class="caption"><?php echo get_the_title( 110 ); ?></p>
@@ -101,13 +101,18 @@
         <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
             <div class="media-inner-img">
-              <?php
-                if (has_post_thumbnail()){
-                  the_post_thumbnail( 'large' );
-                } else {
-                  /* アイキャッチ無い場合の画像 */
-                }
-              ?>
+<!-- 
+              <picture>
+                <source type="image/webp" srcset="<?php bloginfo('template_directory'); ?>/images/common/article-webp/marketics-<?php the_ID(); ?>.jpg.webp" alt="" />
+                <img src="test.png">
+              </picture> -->
+                <?php
+                  if (has_post_thumbnail()){
+                    the_post_thumbnail( 'large' );
+                  } else {
+                    /* アイキャッチ無い場合の画像 */
+                  }
+                ?>
             </div>
           </div>
         </a>
@@ -159,13 +164,15 @@
         <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
             <div class="media-inner-img">
-              <?php
-                if (has_post_thumbnail()){
-                  the_post_thumbnail( 'large' );
-                } else {
-                  /* アイキャッチ無い場合の画像 */
-                }
-              ?>
+              <picture>
+                <?php
+                  if (has_post_thumbnail()){
+                    the_post_thumbnail( 'large' );
+                  } else {
+                    /* アイキャッチ無い場合の画像 */
+                  }
+                ?>
+              </picture>
             </div>
           </div>
         </a>
@@ -217,13 +224,15 @@
         <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
             <div class="media-inner-img">
-              <?php
-                if (has_post_thumbnail()){
-                  the_post_thumbnail( 'large' );
-                } else {
-                  /* アイキャッチ無い場合の画像 */
-                }
-              ?>
+              <picture>
+                <?php
+                  if (has_post_thumbnail()){
+                    the_post_thumbnail( 'large' );
+                  } else {
+                    /* アイキャッチ無い場合の画像 */
+                  }
+                ?>
+              </picture>
             </div>
           </div>
         </a>
@@ -275,13 +284,15 @@
         <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
             <div class="media-inner-img">
-              <?php
-                if (has_post_thumbnail()){
-                  the_post_thumbnail( 'large' );
-                } else {
-                  /* アイキャッチ無い場合の画像 */
-                }
-              ?>
+              <picture>
+                <?php
+                  if (has_post_thumbnail()){
+                    the_post_thumbnail( 'large' );
+                  } else {
+                    /* アイキャッチ無い場合の画像 */
+                  }
+                ?>
+              </picture>
             </div>
           </div>
         </a>
@@ -333,13 +344,15 @@
         <a href="<?php the_permalink(); ?>">
           <div class="media-inner">
             <div class="media-inner-img">
-              <?php
-                if (has_post_thumbnail()){
-                  the_post_thumbnail( 'large' );
-                } else {
-                  /* アイキャッチ無い場合の画像 */
-                }
-              ?>
+              <picture>
+                <?php
+                  if (has_post_thumbnail()){
+                    the_post_thumbnail( 'large' );
+                  } else {
+                    /* アイキャッチ無い場合の画像 */
+                  }
+                ?>
+              </picture>
             </div>
           </div>
         </a>
@@ -387,58 +400,58 @@
         $filenameA   = "Cover_ApparelEC-Winning-Method.png";
 
         $ebookB      = $ebookurl ."market_report/wpdl_mkt-measure-collection_sgit_e-shpg/";
-        $ebooktitleB = "業界別MA施策31選 単品通販型ビジネス編";
+        $ebooktitleB = "業界別MA施策31選<br>単品通販型ビジネス編";
         $filenameB   = "Cover_MA_tanpin_EC.png";
 
         $ebookC      = $ebookurl ."market_report/wpdl_makaibo_new/";
-        $ebooktitleC = "マーケティングオートメーション徹底解剖";
+        $ebooktitleC = "マーケティング<br>オートメーション<br>徹底解剖";
         $filenameC   = "Cover_MA-Kaibo.png";
 
         $ebookD      = $ebookurl ."market_report/wpdl_omni-channel_front-line_vol2/";
-        $ebooktitleD = "本当は教えたくない オムニチャネル最前線 Vol.2";
+        $ebooktitleD = "本当は教えたくない<br>オムニチャネル最前線<br>Vol.2";
         $filenameD   = "Cover_Omni_ch_FrontLine_vol2.png";
 
         $ebookE      = $ebookurl ."marketing-tool/wpdl_mazuyomi_ma-tool-replace/";
-        $ebooktitleE = "MAツールリプレイスを検討する人がまず読む本";
+        $ebooktitleE = "MAツールリプレイスを<br>検討する人がまず読む本";
         $filenameE   = "Cover_mazuyomi_ma-tool-replace.jpg";
 
         $ebookF      = $ebookurl ."cases-measures/wpdl_mkt-kpi-dictionary/";
-        $ebooktitleF = "マーケティングで成果を上げるためのKPI時点";
+        $ebooktitleF = "マーケティングで<br>成果を上げるためのKPI時点";
         $filenameF   = "Cover_mkt-kpi-dictionary.jpg";
       ?>
       <div class="whitepaper _01">
         <a href="<?php echo $ebookA; ?>?ref=marketics-front">
-        <img src="<?php bloginfo('template_directory'); ?>/images/common/<?php echo $fiilenameA; ?>" alt="<?php echo $ebooktitleA; ?>" class="" /><br />
+        <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_ApparelEC-Winning-Method.png" alt="<?php echo $ebooktitleB; ?>" alt="<?php echo $ebooktitleA; ?>" class="" /><br />
           <p><?php echo $ebooktitleA; ?></p>
         </a>
       </div>
       <div class="whitepaper _02">
         <a href="<?php echo $ebookB; ?>?ref=marketics-front">
-        <img src="<?php bloginfo('template_directory'); ?>/images/common/<?php echo $fiilenameB; ?>" alt="<?php echo $ebooktitleB; ?>" class="" /><br />
+        <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA_tanpin_EC.png" alt="<?php echo $ebooktitleB; ?>" class="" /><br />
           <p><?php echo $ebooktitleB; ?></p>
         </a>
       </div>
       <div class="whitepaper _03">
         <a href="<?php echo $ebookC; ?>?ref=marketics-front">
-          <img src="<?php bloginfo('template_directory'); ?>/images/common/<?php echo $fiilenameC; ?>" alt="<?php echo $ebooktitleC; ?>" class="" /><br />
+          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_MA-Kaibo.png" alt="<?php echo $ebooktitleC; ?>" class="" /><br />
           <p><?php echo $ebooktitleC; ?></p>
         </a>
       </div>
       <div class="whitepaper _04">
         <a href="<?php echo $ebookD; ?>?ref=marketics-front">
-          <img src="<?php bloginfo('template_directory'); ?>/images/common/<?php echo $fiilenameD; ?>" alt="<?php echo $ebooktitleD; ?>" class="" /><br />
+          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_Omni_ch_FrontLine_vol2.png" alt="<?php echo $ebooktitleD; ?>" class="" /><br />
           <p><?php echo $ebooktitleD; ?></p>
         </a>
       </div>
       <div class="whitepaper _05">
         <a href="<?php echo $ebookE; ?>?ref=marketics-front">
-          <img src="<?php bloginfo('template_directory'); ?>/images/common/<?php echo $fiilenameE; ?>" alt="<?php echo $ebooktitleE; ?>" class="" /><br />
+          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_mazuyomi_ma-tool-replace.jpg" alt="<?php echo $ebooktitleE; ?>" class="" /><br />
           <P><?php echo $ebooktitleE; ?></P>
         </a>
       </div>
       <div class="whitepaper _06">
         <a href="<?php echo $ebookF; ?>?ref=marketics-front">
-          <img src="<?php bloginfo('template_directory'); ?>/images/common/<?php echo $fiilenameF; ?>" alt="<?php echo $ebooktitleF; ?>" class="" /><br />
+          <img src="<?php bloginfo('template_directory'); ?>/images/common/Cover_mkt-kpi-dictionary.jpg" alt="<?php echo $ebooktitleF; ?>" class="" /><br />
           <p><?php echo $ebooktitleF; ?></p>
         </a>
       </div>

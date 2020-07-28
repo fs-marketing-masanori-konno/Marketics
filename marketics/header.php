@@ -28,6 +28,24 @@
 <script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/themes/marketics/js/common.js"></script>
 <?php } ?>
 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WD7V7G9');</script>
+<!-- End Google Tag Manager -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-58579585-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-58579585-4');
+</script>
+<!-- End GGlobal site tag (gtag.js) - Google Analytics -->
+<!-- Adobe Font -->
 <script>
   (function(d) {
     var config = {
@@ -38,16 +56,7 @@
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-58579585-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-58579585-4');
-</script>
+<!-- End Adobe Font -->
 
 <!-- <script>
 (function(){
@@ -80,6 +89,10 @@
 <link type="image/ico" rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/common/favicon.ico">
 </head>
 <body <?php body_class(); ?>>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD7V7G9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 <header>
 	<div class="header-inner">
 		<div class="l-header-inner">
@@ -103,7 +116,7 @@
 					<?php get_search_form(); ?>
 				</div>
 				<div class="l-right _nav">
-					<nav class="global-nav__list js-header-navi"　id="glonav">
+					<nav class="global-nav__list js-header-req"　id="glonav">
 						<div class="subnav l-right">
 							<div class="intro-nav-btn intro-nav-btn-mailmz" itemprop="hasPart" itemscope itemtype="http://schema.org/ContactPage">
 								<a itemprop="url" href="https://bdash-marketing.com/mailmz/"><img class="txt_img" src="<?php bloginfo('template_directory'); ?>/images/common/nav_mailmz_txt.png" alt="メルマガ登録"><span class="txt_html" itemprop="name">メルマガ登録</span></a>

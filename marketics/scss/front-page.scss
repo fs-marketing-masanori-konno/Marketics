@@ -215,6 +215,15 @@ a:hover .media-inner {
 		}
 	}
 }
+._interview .top-archive-meta,
+._event-report .top-archive-meta {
+  margin-bottom: 0;
+}
+._information .top-archive-meta,
+._library .top-archive-meta,
+._marketing .top-archive-meta {
+  margin-bottom: 0;
+}
 /* .section-button */
 .section-button {
 	text-align: center;
@@ -310,6 +319,8 @@ a:hover .media-inner {
 	// padding-bottom: 15px;
 	margin-right: 0px;
 	margin-left: 0px;
+	height: 100%;
+  overflow: hidden;
 }
 .ebook-bg {
 	position: relative;
@@ -321,7 +332,7 @@ a:hover .media-inner {
 	// padding-top: 40px;
 }
 .ebook-bg-trim {
-	height: 860px;
+	height: 640px;
 	width: 100%;
 	position: absolute;
 	overflow: hidden;
@@ -454,7 +465,7 @@ a:hover .media-inner {
 				height: 6px;
 				border-radius: 6px;
 				background-color: #018fd0;
-				animation: dotsGaugeIN 4.6s .6s linear;
+				animation: dotsGaugeIN 5.6s .6s linear;
 				animation-fill-mode: both;
 			}
 		}
@@ -471,7 +482,7 @@ a:hover .media-inner {
 			li {
 				width: 40px;
 				&.slick-active button:after{
-					animation: dotsGaugeINsp 4.6s .6s linear;
+					animation: dotsGaugeINsp 5.6s .6s linear;
 					animation-fill-mode: both;
 				}
 			}
@@ -814,9 +825,9 @@ a:hover .media-inner {
 	.top-section .cat_name_heading {
 		width: 500px;
 		background-size: 160px;
-		background-position-y: 10px;
-		padding-bottom: 90px;
-		padding-top: 32px;
+		background-position-y: 36px;
+    padding-bottom: 64px;
+    padding-top: 64px;
 	}
 	.top-section .cat_name_heading h1 {
 		font-size: 42px;
@@ -884,7 +895,6 @@ a:hover .media-inner {
 		margin-top: 0;
 		padding-top: 0;
 	}
-
 /* ==== Slider 1024 ==== */
 	.slider-for {
 			img {
@@ -975,6 +985,9 @@ a:hover .media-inner {
 	.multiple-banner {
 			width: 320px;
 	}
+	.ebook-bg-trim {
+  	height: 860px;
+  }
 }
 
 @media screen and (max-width: 768px) {

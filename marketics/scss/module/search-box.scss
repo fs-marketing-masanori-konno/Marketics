@@ -184,11 +184,11 @@ nav.js-header-navi.header-navi-hide {
   animation-fill-mode: both;
 }
 
-	form.searchform .search-window {
+	.gloval-menu form.searchform .search-window {
 	  animation: fadeOut .3s;
 	  animation-fill-mode: both;
 	}
-	form.searchform.search-open .search-window {
+	.gloval-menu form.searchform.search-open .search-window {
 	  animation: fadeIn .3s .3s;
 	  animation-fill-mode: both;
 	}

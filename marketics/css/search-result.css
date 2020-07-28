@@ -427,11 +427,11 @@ header {
   background: #fff;
   max-height: unset;
   min-height: unset;
-  min-height: 500px;
   height: auto;
 }
 .category-eyecatch._search-result .search-result-box {
   width: 960px;
+  min-height: 200px;
   padding-right: 30px;
   padding-left: 30px;
   margin: 60px auto 0;
@@ -465,13 +465,14 @@ header {
 .category-eyecatch._search-result form.searchform .search-box {
   display: flex;
   opacity: 1;
+  max-width: 100%;
 }
 
 .search-results .category-eyecatch._search-result {
   min-height: 0;
 }
 
-.search-results form.searchform .search-window {
+.category-eyecatch form.searchform .search-window {
   display: block;
 }
 
@@ -487,7 +488,8 @@ header {
 
 ._search-result .header-search-box-icon {
   width: 18px;
-  top: 26px;
+  top: 25px;
+  left: 20px;
 }
 
 .cat-title {
@@ -718,6 +720,36 @@ a:hover .archive-thumb .media-inner {
   display: none;
 }
 
+.no-result {
+  height: 400px;
+  background: #fff;
+}
+
+.category-eyecatch button .icon-search {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  box-sizing: border-box;
+  outline: 0;
+  resize: none;
+  margin: 0;
+  padding: 0;
+  zoom: 1;
+  border: none;
+  font-size: inherit;
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 72px;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 5px;
+  font-weight: 900;
+  background-color: #e6e6e6;
+  color: #505058;
+}
+
 /* ============
 	Pagenavi
 ============ */
@@ -845,7 +877,12 @@ a:hover .archive-thumb .media-inner {
     font-size: 21px;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
+  .category-eyecatch._search-result .search-result-box {
+    width: 100%;
+    max-width: 960px;
+  }
+
   .archive-item {
     width: 100%;
     position: relative;
@@ -869,9 +906,6 @@ a:hover .archive-thumb .media-inner {
     width: 100%;
   }
 
-  .category-eyecatch img {
-    width: 300px;
-  }
   .category-eyecatch .header-img {
     min-width: unset;
     height: 100%;
@@ -997,6 +1031,11 @@ a:hover .archive-thumb .media-inner {
     border: 2px solid #fff;
     background: #008cef;
     color: #fff;
+  }
+
+  ._search-result .result-keywords {
+    margin-top: 24px;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 480px) {

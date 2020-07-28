@@ -217,7 +217,8 @@ nav {
   text-align: center;
   line-height: 1;
 }
-.home ,
+.search-results,
+.home,
 .category,
 .tax-tagcat,
 .single {
@@ -242,6 +243,9 @@ nav {
       // margin: auto;
     }
   }
+}
+.gloval-menu form.searchform .search-window {
+  display: none;
 }
 // .category,
 // .single {
@@ -784,8 +788,9 @@ nav {
     margin: 20px auto;
     text-align: center;
   }
-  .category,
+  .search-results,
   .home,
+  .category,
   .tax-tagcat,
   .single {
     .l-right._nav {
@@ -903,9 +908,10 @@ nav {
     cursor: pointer;
   }
   .single,
+  .search-results,
   .home,
-  .tax-tagcat,
-  .category {
+  .category,
+  .tax-tagcat {
     .l-right._nav {
       position: fixed;
       right: -320px;
@@ -917,9 +923,10 @@ nav {
     }
   }
   .single,
+  .search-results,
   .home,
-  .tax-tagcat,
-  .category {
+  .category,
+  .tax-tagcat {
     &.nav-open {
       .l-right._nav {
         right: 0px;
@@ -956,6 +963,7 @@ nav {
       display: none;
     }
   }
+  .search-results,
   .home,
   .category,
   .tax-tagcat {
@@ -1015,7 +1023,7 @@ nav {
     left: 11px;
   }
   button.header-search-box-submit .icon-search {
-    top: 4px;
+    top: 5px;
     font-size: 12px;
   }
   .func-search-icon {
@@ -1023,6 +1031,13 @@ nav {
   }
   .header-inner .l-header-inner {
     padding-right: 34px;
+  }
+  .l-left.gloval-menu {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .footer-nav ul {
+    max-width: 640px;
   }
 }
 
@@ -1049,7 +1064,7 @@ nav {
     flex-basis: unset;
   }
   .searchform {
-    margin-right: 36px;
+    margin-right: 46px;
   }
   .nav-txt-en {
     font-size: 15.5px;
@@ -1175,15 +1190,38 @@ nav {
   .header-inner .l-header-inner {
     padding: 0 4px;
   }
-  .hamburger
+  .hamburger {
     width: 32px;
+  }
+  .hamburger__line {
+    position: absolute;
+    left: 8px;
+    width: 20px;
+    height: 3px;
+  }
+  .hamburger__line--1 {
+    top: 12px;
+  }
+  .hamburger__line--2 {
+    top: 18px;
+  }
+  .hamburger__line--3 {
+    top: 24px;
+  }
+  .header-search-close {
+    margin-left: 8px;
+    transform: none;
   }
   .searchform {
     .searchform {
-    margin-right: 0;
-    top: 10px;
-    right: 42px;
-    position: absolute;
+      margin-right: 0;
+      top: 10px;
+      right: 42px;
+      position: absolute;
+    }
+  }
+  .func-search-icon {
+    width: 16px;
   }
 }
 

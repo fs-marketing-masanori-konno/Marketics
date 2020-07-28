@@ -35,9 +35,14 @@
 		          	<span class="search-result-text">件</span>
 		          </div>
       			</div>
+					</div>
+				</div>
+				<div class="category-eyecatch _search-result">
+					<div class="search-result-box">
 						<h1 class="result-keywords">検索キーワードが未入力です。</h1>
 					</div>
 				</div>
+				<div class="no-result _search-result"></div>
 
 			<?php } else { ?>
 			<!-- 検索キーワードの検索結果 -->
@@ -100,12 +105,12 @@
 						</div>
 					</div>
 				<?php else: ?>
-					<div class="category-eyecatch">
+					<div class="category-eyecatch _search-result">
 						<div class="search-result-box">
-							<h1 class="search-result"><?php echo $search_query; ?> に一致する情報は見つかりませんでした。</h1>
-							<div class="searchform-box"><?php get_search_form(); ?></div>
+							<h1 class="result-keywords"><?php echo $search_query; ?> に一致する情報は見つかりませんでした。</h1>
 						</div>
 					</div>
+					<div class="no-result _search-result"></div>
 				<?php endif; ?>
 
 					<div class="m-page-nav">
